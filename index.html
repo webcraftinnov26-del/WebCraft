@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebCraft Innovations — Création de sites web premium à Laval</title>
+<meta name="description" content="WebCraft crée des sites web modernes et haut de gamme pour commerces et entrepreneurs : sites vitrines, restaurants, salons, cliniques. Prix fixe dès 140$, livraison rapide. Laval, Québec.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WebCraft — Sites web premium à prix fixe">
+<meta property="og:description" content="WebCraft vous crée une présence en ligne qui transforme les visiteurs en clients. Deux formules claires : Site Vitrine 140$ ou Sur Mesure + 230$. Laval, Québec.">
+<meta property="og:locale" content="fr_CA">
+<link rel="canonical" href="https://webcraftinnov26-del.github.io/webcraft/">
+<meta property="og:url" content="https://webcraftinnov26-del.github.io/webcraft/">
+<meta property="og:image" content="https://webcraftinnov26-del.github.io/webcraft/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0b'/%3E%3Ctext x='50' y='72' font-family='Arial Black,sans-serif' font-size='62' font-weight='900' fill='%23E0324A' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "WebCraft Innovations",
+  "description": "Création de sites web modernes et premium pour commerces et entrepreneurs.",
+  "telephone": "+1-514-290-6183",
+  "email": "webcraftinnov26@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Laval", "addressRegion": "QC", "addressCountry": "CA" },
+  "priceRange": "140$–230$",
+  "sameAs": ["https://www.instagram.com/webcraft.inv"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Space+Mono:wght@400;700&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:      #E0324A;
+    --red-dark: #9b1a2a;
+    --red-glow: rgba(224,50,74,.5);
+    --ink:      #0a0a0b;
+    --surface:  #111114;
+    --surface2: #17171b;
+    --text:     #f4f2f2;
+    --muted:    #8b8791;
+    --line:     #26242b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--ink);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .anton { font-family: 'Anton', sans-serif; font-weight: 400; letter-spacing: .5px; }
+  .mono  { font-family: 'Space Mono', monospace; }
+  .red { color: var(--red); }
+
+  /* ═══════ Barre de progression ═══════ */
+  .progress {
+    position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--red-dark), var(--red));
+    z-index: 500; box-shadow: 0 0 10px var(--red-glow);
+  }
+
+  /* ═══════ NAV ═══════ */
+  nav {
+    position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 200;
+    display: flex; align-items: center; justify-content: space-between;
+    width: calc(100% - 40px); max-width: 1280px;
+    padding: 14px 24px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--ink) 78%, transparent);
+    backdrop-filter: blur(18px);
+    transition: padding .4s, box-shadow .4s, top .4s, background .4s;
+  }
+  nav.shrink {
+    padding: 9px 24px; top: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.4);
+    background: color-mix(in srgb, var(--ink) 88%, transparent);
+  }
+  .brand { display: flex; flex-direction: column; line-height: 1; cursor: pointer; user-select: none; }
+  .brand .main { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.7rem; letter-spacing: 1px; transition: font-size .4s; }
+  nav.shrink .brand .main { font-size: 1.42rem; }
+  .brand .main .red { color: var(--red); }
+  .brand .sub { font-family: 'Space Mono', monospace; font-size: .52rem; letter-spacing: 5px; color: var(--muted); text-align: right; margin-top: 3px; }
+  .nav-right { display: flex; align-items: center; gap: 26px; }
+  .nav-links { display: flex; gap: 26px; }
+  .nav-links a {
+    font-size: .78rem; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; position: relative; transition: color .3s;
+  }
+  .nav-links a::after { content:""; position:absolute; left:0; bottom:-5px; width:0; height:1px; background: var(--red); transition: width .3s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-tools { display: flex; align-items: center; gap: 12px; }
+  .icon-btn {
+    width: 38px; height: 38px; border: 1px solid var(--line); background: none; border-radius: 10px;
+    color: var(--text); cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: border-color .3s, background .3s, transform .2s; font-family: 'Space Mono', monospace; font-size: .72rem; font-weight: 700;
+  }
+  .icon-btn:hover { border-color: var(--red); background: color-mix(in srgb, var(--red) 12%, transparent); }
+  .icon-btn:active { transform: scale(.9); }
+  .icon-btn svg { width: 18px; height: 18px; }
+  .burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+  .burger span { width: 24px; height: 2px; background: var(--text); transition: .3s; }
+
+  /* ═══════ HERO 3D ═══════ */
+  .hero { position: relative; height: 100vh; min-height: 640px; overflow: hidden; }
+  #heroGL { position: absolute; inset: 0; z-index: 1; }
+  .hero-overlay {
+    position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column;
+    justify-content: center; padding: 0 40px; max-width: 1300px; margin: 0 auto; left: 0; right: 0;
+    pointer-events: none;
+  }
+  .hero-kicker {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2.4rem, 7vw, 5.5rem);
+    line-height: .95;
+    letter-spacing: .5px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 18px; pointer-events: auto;
+    opacity: 0; transform: translateY(30px) skewX(-3deg); animation: heroIn .8s .15s forwards;
+    text-shadow: 0 6px 40px rgba(224,50,74,.35);
+  }
+  .hero h1 {
+    font-family: 'Anton', sans-serif; font-weight: 400;
+    font-size: clamp(1.6rem, 3.8vw, 3rem); line-height: 1.05; letter-spacing: .5px;
+    max-width: 22ch; margin-bottom: 26px; color: var(--text);
+  }
+  .hero h1 .line { display: block; overflow: hidden; }
+  .hero h1 .line span { display: inline-block; transform: translateY(110%); animation: lineUp .9s cubic-bezier(.2,.8,.2,1) forwards; }
+  .hero h1 .line:nth-child(1) span { animation-delay: .25s; }
+  .hero h1 .line:nth-child(2) span { animation-delay: .38s; }
+  .hero h1 .line:nth-child(3) span { animation-delay: .51s; }
+  @keyframes lineUp { to { transform: none; } }
+  @keyframes heroIn { to { opacity: 1; transform: none; } }
+  .hero-sub {
+    font-size: 1.2rem; color: var(--muted); max-width: 44ch; margin-bottom: 38px; pointer-events: auto;
+    opacity: 0; transform: translateY(20px); animation: heroIn .8s .7s forwards;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; pointer-events: auto; opacity: 0; transform: translateY(20px); animation: heroIn .8s .85s forwards; }
+
+  .btn {
+    font-family: 'Barlow', sans-serif; font-weight: 600; font-size: .82rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 16px 38px; border-radius: 40px; text-decoration: none; cursor: pointer; border: 1px solid transparent;
+    position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px;
+    transition: transform .3s, box-shadow .3s, background .3s, color .3s, border-color .3s;
+  }
+  .btn .arrow { transition: transform .3s; }
+  .btn:hover .arrow { transform: translateX(6px); }
+  .btn::after { content:""; position:absolute; top:0; left:-80%; width:50%; height:100%;
+    background: linear-gradient(105deg, transparent, rgba(255,255,255,.35), transparent); transform: skewX(-20deg); transition: left .6s; }
+  .btn:hover::after { left: 140%; }
+  .btn-primary { background: var(--red); color: #fff; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px var(--red-glow); }
+  .btn-ghost { border-color: var(--line); color: var(--text); }
+  .btn-ghost:hover { border-color: var(--red); color: var(--red); }
+
+  .scroll-cue {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 3;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    font-family: 'Space Mono', monospace; font-size: .6rem; letter-spacing: 3px; color: var(--muted);
+  }
+  .scroll-cue .bar { width: 1px; height: 44px; background: linear-gradient(var(--red), transparent); animation: cue 2s infinite; transform-origin: top; }
+  @keyframes cue { 0%,100% { transform: scaleY(.3); opacity:.3; } 50% { transform: scaleY(1); opacity:1; } }
+
+  /* ═══════ Sections ═══════ */
+  section { position: relative; }
+  .wrap { max-width: 1300px; margin: 0 auto; padding: 60px 40px; }
+  .head { max-width: 760px; margin-bottom: 44px; }
+  .head .kicker { font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--red); display: inline-block; padding: 5px 14px; border: 1px solid color-mix(in srgb, var(--red) 40%, transparent); border-radius: 30px; }
+  .head h2 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(2.6rem, 7vw, 5.2rem); margin: 20px 0 14px; line-height: .98; letter-spacing: .5px; text-transform: uppercase; }
+  .head p { color: var(--muted); font-size: 1.12rem; }
+
+  /* reveal */
+  .rv { opacity: 0; transform: translateY(46px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+  .rv.in { opacity: 1; transform: none; }
+  .rv.d1 { transition-delay: .1s; } .rv.d2 { transition-delay: .2s; } .rv.d3 { transition-delay: .3s; }
+
+  /* ═══════ Bande défilante (marquee) ═══════ */
+  .marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; overflow: hidden; background: var(--surface); }
+  .marquee-track { display: flex; gap: 60px; white-space: nowrap; width: max-content; animation: scrollX 26s linear infinite; }
+  .marquee-track span { font-family: 'Anton', sans-serif; font-size: 1.7rem; color: var(--muted); letter-spacing: 1px; display: inline-flex; align-items: center; gap: 60px; }
+  .marquee-track span::after { content: "◆"; color: var(--red); font-size: .9rem; }
+  @keyframes scrollX { to { transform: translateX(-50%); } }
+
+  /* ═══════ Services (cartes 3D tilt) ═══════ */
+  .services { background: var(--ink); }
+  .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .svc {
+    position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+    padding: 38px 32px; overflow: hidden; transform-style: preserve-3d; transition: transform .2s ease-out, border-color .4s;
+  }
+  .svc::before { content:""; position:absolute; top: var(--my,50%); left: var(--mx,50%); width: 300px; height: 300px;
+    background: radial-gradient(circle, var(--red-glow), transparent 60%); opacity: 0; transform: translate(-50%,-50%); transition: opacity .4s; pointer-events: none; }
+  .svc:hover { border-color: color-mix(in srgb, var(--red) 55%, transparent); }
+  .svc:hover::before { opacity: .5; }
+  .svc-inner { transform: translateZ(40px); }
+  .svc-icon { width: 46px; height: 46px; margin-bottom: 18px; }
+  .svc .num { font-family: 'Space Mono', monospace; font-size: .74rem; color: var(--red); letter-spacing: 2px; }
+  .svc h3 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 2rem; margin: 12px 0; text-transform: uppercase; letter-spacing: .5px; line-height: 1; }
+  .svc p { color: var(--muted); font-size: .98rem; }
+
+  /* ═══════ Process (timeline défilé) ═══════ */
+  .process { background: var(--surface); position: relative; }
+  #processGL { position: absolute; inset: 0; z-index: 0; opacity: .55; pointer-events: none; }
+  .process::after { content:""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 30%, var(--surface) 88%); }
+  .timeline { position: relative; max-width: 780px; margin: 0 auto; }
+  .timeline::before { content:""; position: absolute; left: 27px; top: 0; bottom: 0; width: 2px; background: var(--line); }
+  .tstep { position: relative; padding: 0 0 46px 82px; }
+  .tstep:last-child { padding-bottom: 0; }
+  .tstep .dot {
+    position: absolute; left: 14px; top: 0; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--ink); border: 2px solid var(--red); display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-size: .7rem; color: var(--red); z-index: 1;
+  }
+  .tstep h3 { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.4rem; text-transform: uppercase; margin-bottom: 8px; }
+  .tstep p { color: var(--muted); }
+
+  /* ═══════ Pourquoi (gros chiffres) ═══════ */
+  .why { background: var(--ink); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+  .why-card { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--red); padding: 34px 28px; transition: transform .3s, box-shadow .3s; }
+  .why-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.4); }
+  .why-big { font-family: 'Anton', sans-serif; font-size: 3rem; color: var(--red); line-height: 1; }
+  .why-label { font-family: 'Space Mono', monospace; font-size: .78rem; letter-spacing: 2px; text-transform: uppercase; margin: 8px 0 12px; }
+  .why-card p { color: var(--muted); font-size: .95rem; }
+
+  /* ═══════ Forfaits ═══════ */
+  .pricing { background: var(--surface); }
+  #pricingGL { position: absolute; inset: 0; z-index: 0; opacity: .85; pointer-events: none; }
+  .pricing .wrap { position: relative; z-index: 1; }
+  .price-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+  .price-card {
+    position: relative; background: color-mix(in srgb, var(--ink) 92%, transparent); border: 1px solid var(--line); border-radius: 20px; padding: 44px 38px;
+    overflow: hidden; transition: transform .4s, border-color .4s, box-shadow .4s; backdrop-filter: blur(4px);
+  }
+  .price-card:hover { transform: translateY(-8px); border-color: var(--red); box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+  .price-card.premium { border-color: rgba(201,162,39,.5); background: linear-gradient(160deg, #14100a, #0d0b07); }
+  .price-card.premium:hover { border-color: #c9a227; box-shadow: 0 20px 50px rgba(201,162,39,.2); }
+  .price-badge { position: absolute; top: 0; right: 0; background: #c9a227; color: #0a0a0a; font-family: 'Space Mono', monospace; font-size: .68rem; font-weight: 700; letter-spacing: 2px; padding: 6px 16px; border-bottom-left-radius: 12px; }
+  .price-name { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.6rem; text-transform: uppercase; }
+  .price-tag { font-family: 'Anton', sans-serif; font-size: 3.4rem; color: var(--red); margin: 14px 0 6px; line-height: 1; }
+  .price-card.premium .price-tag { color: #c9a227; }
+  .price-note { font-family: 'Space Mono', monospace; font-size: .7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+  .price-list { list-style: none; margin-bottom: 30px; }
+  .price-list li { padding: 9px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .95rem; display: flex; gap: 10px; align-items: flex-start; }
+  .price-list li::before { content: "✓"; color: var(--red); font-weight: 700; }
+  .price-card.premium .price-list li::before { color: #c9a227; }
+  .price-card .btn { width: 100%; justify-content: center; }
+  .price-card.premium .btn-primary { background: #c9a227; color: #0a0a0a; }
+  .price-card.premium .btn-primary:hover { box-shadow: 0 14px 40px rgba(201,162,39,.4); }
+  .feat-3d { color: #c9a227 !important; font-weight: 700 !important; }
+  .feat-3d::before { content: "◆" !important; color: #c9a227 !important; }
+  /* Aperçu 3D dans la carte premium */
+  .price-3d-preview {
+    position: relative; height: 120px; margin: 0 0 20px; border-radius: 12px; overflow: hidden;
+    border: 1px solid rgba(201,162,39,.3); background: radial-gradient(ellipse at 60% 40%, #1a1408, #0a0806);
+  }
+  .price-3d-preview canvas { display: block; width: 100%; height: 100%; }
+  .price-3d-preview .p3d-label {
+    position: absolute; bottom: 8px; left: 12px; font-family: 'Space Mono', monospace; font-size: .62rem;
+    letter-spacing: 2px; color: #c9a227; text-transform: uppercase; z-index: 2;
+  }
+
+  /* ═══════ CTA final ═══════ */
+  .final { position: relative; overflow: hidden; text-align: center; padding: 72px 40px;
+    background: radial-gradient(ellipse at center, rgba(224,50,74,.16), transparent 65%), var(--ink); }
+  .final .echo { position: absolute; top:50%; left:50%; transform: translate(-50%,-50%); font-family:'Oswald',sans-serif; font-weight:700;
+    font-size: clamp(200px, 42vw, 460px); color: rgba(224,50,74,.05); line-height:1; pointer-events:none; user-select:none; }
+  .final .echo-3d { position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .28; }
+  .final-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+  .final-big { font-size: clamp(1.5rem, 3.4vw, 2.3rem) !important; line-height: 1.4; font-weight: 500; color: var(--text) !important; max-width: 100%; }
+  .final h2 { font-family:'Anton',sans-serif; font-weight: 400; font-size: clamp(2.2rem,6vw,3.6rem); line-height: 1.08; margin-bottom: 20px; }
+  .final p { color: var(--muted); font-size: 1.15rem; margin-bottom: 34px; }
+  .final-reassure { display: flex; gap: 26px; justify-content: center; flex-wrap: wrap; margin-top: 30px; font-family:'Space Mono',monospace; font-size:.82rem; color: var(--muted); }
+
+  /* ═══════ Footer ═══════ */
+  footer { background: #000; border-top: 1px solid var(--line); padding: 60px 40px 36px; }
+  .foot-inner { max-width: 1300px; margin: 0 auto; }
+  .foot-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 46px; }
+  @media (min-width: 620px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  .foot-box { display: flex; align-items: center; gap: 16px; background: var(--red); color: #fff; text-decoration: none;
+    padding: 22px 26px; border-radius: 10px; font-family:'Oswald',sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;
+    transition: transform .18s, box-shadow .25s, background .25s; overflow: hidden; position: relative; }
+  .foot-box:hover { transform: translateY(-3px); box-shadow: 0 10px 28px var(--red-glow); background: var(--red-dark); }
+  .foot-box svg { width: 28px; height: 28px; flex-shrink: 0; }
+  .foot-bottom { text-align: center; color: var(--muted); }
+  .foot-bottom .brand { display: inline-flex; margin-bottom: 12px; }
+  .foot-bottom .brand .main { font-size: 1.5rem; }
+  .foot-socials { display: flex; gap: 16px; justify-content: center; margin: 14px 0; }
+  .foot-socials a { color: var(--muted); font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:1px; text-decoration: none; transition: color .3s; }
+  .foot-socials a:hover { color: var(--red); }
+
+  /* ═══════ Page Contact ═══════ */
+  .contact-page {
+    position: fixed; inset: 0; z-index: 350;
+    background: radial-gradient(ellipse at 70% 20%, rgba(224,50,74,.14), transparent 60%), var(--ink);
+    display: none; overflow-y: auto;
+  }
+  .contact-page.open { display: block; animation: fadeIn .4s; }
+  .contact-gl { position: absolute; inset: 0; z-index: 0; opacity: .5; pointer-events: none; }
+  .contact-back {
+    position: absolute; top: 26px; left: 26px; z-index: 3;
+    width: 48px; height: 44px; border: 1px solid var(--line); background: color-mix(in srgb, var(--ink) 70%, transparent);
+    border-radius: 10px; color: var(--text); font-size: 1.4rem; cursor: pointer; transition: border-color .3s, color .3s, background .3s;
+  }
+  .contact-back:hover { border-color: var(--red); color: var(--red); }
+  .contact-inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; padding: 110px 30px 70px; text-align: center; }
+  .contact-kicker { font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 4px; text-transform: uppercase; color: var(--red);
+    display: inline-block; padding: 5px 16px; border: 1px solid color-mix(in srgb, var(--red) 40%, transparent); border-radius: 30px; }
+  .contact-title { font-size: clamp(2.6rem, 8vw, 5rem); line-height: .98; margin: 20px 0 16px; text-transform: uppercase; }
+  .contact-sub { color: var(--muted); font-size: 1.15rem; max-width: 46ch; margin: 0 auto 50px; }
+  .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-bottom: 44px; }
+  .contact-card {
+    position: relative; overflow: hidden; text-decoration: none; text-align: left;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 32px 28px;
+    color: var(--text); transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s, box-shadow .4s;
+  }
+  .contact-card .cc-glow { position: absolute; top: -30%; right: -20%; width: 200px; height: 200px;
+    background: radial-gradient(circle, var(--red-glow), transparent 65%); opacity: 0; transition: opacity .4s; }
+  .contact-card:hover { transform: translateY(-8px); border-color: var(--red); box-shadow: 0 22px 50px rgba(224,50,74,.2); }
+  .contact-card:hover .cc-glow { opacity: 1; }
+  .cc-icon { width: 42px; height: 42px; color: var(--red); margin-bottom: 18px; }
+  .cc-label { font-family: 'Space Mono', monospace; font-size: .72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .cc-value { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.15rem; word-break: break-word; margin-bottom: 18px; }
+  .cc-action { font-family: 'Space Mono', monospace; font-size: .8rem; color: var(--red); letter-spacing: 1px; }
+  .contact-foot { font-family: 'Space Mono', monospace; font-size: .82rem; letter-spacing: 2px; color: var(--muted); }
+
+
+    backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; padding: 24px; }
+  .modal.open { display: flex; animation: fadeIn .3s; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal-card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 44px 38px; max-width: 480px; width: 100%; text-align: center; position: relative; }
+  .modal-card h3 { font-family:'Anton',sans-serif; font-weight: 400; font-size: 1.8rem; margin-bottom: 12px; }
+  .modal-card p { color: var(--muted); margin-bottom: 26px; }
+  .modal-close { position: absolute; top: 16px; right: 18px; background: none; border: none; color: var(--muted); font-size: 1.6rem; cursor: pointer; }
+  .modal-actions { display: flex; flex-direction: column; gap: 12px; }
+
+  /* ═══════ Amb orbs ═══════ */
+  .amb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .4; pointer-events: none; z-index: 0; animation: float 16s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(40px,-30px) scale(1.15);} }
+  @keyframes svcPulse { 0% { transform: scale(1); box-shadow: 0 0 0 rgba(224,50,74,0); } 40% { transform: scale(1.04); box-shadow: 0 16px 50px rgba(224,50,74,.35); border-color: var(--red); } 100% { transform: scale(1); } }
+  .services > *, .why > *, .pricing > *, .process > * { position: relative; z-index: 1; }
+  .services, .why, .pricing, .process { overflow: hidden; }
+
+  /* ═══════ Responsive ═══════ */
+  @media (max-width: 860px) {
+    nav { padding: 18px 22px; } nav.shrink { padding: 12px 22px; }
+    .nav-links { position: fixed; inset: 0 0 0 auto; width: 78%; max-width: 330px; background: var(--surface);
+      flex-direction: column; justify-content: center; padding: 60px 40px; gap: 28px; transform: translateX(100%);
+      transition: transform .45s cubic-bezier(.5,0,.2,1); box-shadow: -20px 0 60px rgba(0,0,0,.5); }
+    .nav-links.open { transform: translateX(0); }
+    .nav-links a { font-size: 1rem; }
+    .burger { display: flex; z-index: 201; }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .wrap { padding: 64px 22px; }
+    .price-grid { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    .rv { opacity: 1; transform: none; }
+  }
+  :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- ═══════ NAV ═══════ -->
+<nav id="nav">
+  <div class="brand" onclick="location.href='#accueil'">
+    <span class="main"><span class="red">W</span>EB<span class="red">C</span>RAFT</span>
+    <span class="sub">INNOVATIONS</span>
+  </div>
+  <div class="nav-right">
+    <div class="nav-links" id="navLinks">
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#forfaits">Forfaits</a>
+      <a href="#" onclick="openContactPage(); return false;">Contact</a>
+    </div>
+    <div class="nav-tools">
+      <button class="icon-btn" id="langBtn" aria-label="Langue">ENG</button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<header class="hero" id="accueil">
+  <canvas id="heroGL"></canvas>
+  <div class="hero-overlay">
+    <div class="hero-kicker anton">Création de sites<br>sur mesure</div>
+    <h1 class="anton">
+      <span class="line"><span>Des sites conçus</span></span>
+      <span class="line"><span>pour <span class="red">votre commerce</span>,</span></span>
+      <span class="line"><span>livrés vite et bien faits.</span></span>
+    </h1>
+    <p class="hero-sub"><span class="red">W</span>eb<span class="red">C</span>raft vous crée un site qui reflète vos idées et vos concepts — rapide, propre, et pensé pour attirer de vrais clients.</p>
+    <div class="hero-actions">
+      <a href="#forfaits" class="btn btn-primary">Débuter mon projet <span class="arrow">→</span></a>
+      <a href="#services" class="btn btn-ghost">Voir les services</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>DÉFILER</span><span class="bar"></span></div>
+</header>
+
+<!-- ═══════ SERVICES ═══════ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kicker">Nos services</div>
+      <h2>Des solutions web<br>pour votre commerce</h2>
+      <p>Restauration, coiffure, vente, artisanat, produits uniques, marques de vêtements, salons de beauté — peu importe votre domaine, <span class="red">W</span>eb<span class="red">C</span>raft construit le site qui vous ressemble. Notre idée est simple : un commerce qui n'est pas visible en ligne aujourd'hui, c'est un commerce qui laisse partir des clients vers la concurrence. On crée des sites qui montrent votre commerce sous son meilleur jour, qui donnent confiance dès le premier coup d'œil, et qui transforment les visiteurs en vrais clients. Chaque site est pensé pour votre réalité : vos produits, vos couleurs, votre ambiance, votre clientèle. Pas de modèle générique recopié d'un commerce à l'autre — on part de qui vous êtes pour construire quelque chose d'unique. Notre but n'est pas juste de vous faire « un site » : c'est de vous donner un outil qui travaille pour vous, qui vous rapporte des appels, des réservations et des ventes, même quand vous dormez. Un site rapide, moderne, qui fonctionne aussi bien sur téléphone que sur ordinateur, et qui met votre commerce à la hauteur des plus grands.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc tilt rv">
+        <div class="svc-inner">
+          <svg class="svc-icon" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="24" rx="3" fill="none" stroke="#E0324A" stroke-width="2.2"/><path d="M6 27h36" stroke="#E0324A" stroke-width="1.4" opacity=".5"/><rect x="18" y="35" width="12" height="4" rx="1" fill="#E0324A" opacity=".7"/><rect x="14" y="39" width="20" height="2.4" rx="1.2" fill="#E0324A"/></svg>
+          <div class="num">01</div><h3>Site vitrine</h3>
+          <p>Une présence en ligne claire et professionnelle pour présenter votre activité, vos produits et vos coordonnées. C'est la carte de visite moderne de votre commerce : dès qu'un client vous cherche, il vous trouve et voit tout de suite qui vous êtes. On met en valeur ce qui vous rend unique, avec un design soigné qui inspire confiance et donne envie de vous contacter. Idéal pour être visible rapidement et sérieusement.</p>
+        </div>
+      </article>
+      <article class="svc tilt rv d1">
+        <div class="svc-inner">
+          <svg class="svc-icon" viewBox="0 0 48 48"><path d="M24 6l16 8v12q0 12-16 17Q8 38 8 26V14Z" fill="none" stroke="#E0324A" stroke-width="2" stroke-linejoin="round"/><path d="M17 24l5 5 10-11" fill="none" stroke="#E0324A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="num">02</div><h3>Site sur mesure</h3>
+          <p>Un site entièrement pensé selon vos besoins et votre image, sans modèle générique. Vous décrivez votre vision, vos envies, votre ambiance, et nous la transformons en un site unique qui ne ressemble à aucun autre. Chaque détail est travaillé pour coller à votre marque : couleurs, animations, structure, ton. C'est le choix de ceux qui veulent vraiment se démarquer et marquer les esprits dès la première visite.</p>
+        </div>
+      </article>
+      <article class="svc tilt rv d2">
+        <div class="svc-inner">
+          <svg class="svc-icon" viewBox="0 0 48 48"><path d="M12 16l2 26q0 2 2 2h16q2 0 2-2l2-26Z" fill="none" stroke="#E0324A" stroke-width="2" stroke-linejoin="round"/><path d="M18 16v-5q0-5 6-5t6 5v5" fill="none" stroke="#E0324A" stroke-width="2"/><path d="M12 16h24" stroke="#E0324A" stroke-width="2"/></svg>
+          <div class="num">03</div><h3>Boutique en ligne</h3>
+          <p>Vendez vos produits directement depuis votre site, 24 heures sur 24, sans dépendre uniquement des réseaux sociaux. On construit une boutique avec une présentation soignée de chaque produit et une navigation simple qui donne envie d'acheter. Vos clients commandent en quelques clics, et vous, vous gérez tout facilement. C'est votre commerce ouvert en permanence, même quand votre local est fermé.</p>
+        </div>
+      </article>
+      <article class="svc tilt rv d3">
+        <div class="svc-inner">
+          <svg class="svc-icon" viewBox="0 0 48 48"><path d="M27 5 13 27h9l-2 16 16-24H26Z" fill="#E0324A" opacity=".9"/></svg>
+          <div class="num">04</div><h3>Refonte & mise à jour</h3>
+          <p>Votre site est dépassé, lent ou mal adapté au téléphone ? On lui redonne une seconde vie. On le modernise, on le rend plus rapide, plus clair et parfaitement adapté à tous les écrans. Un site vieillissant fait fuir les clients sans que vous le sachiez ; un site moderne, lui, les rassure et les retient. On repart de l'existant pour en faire quelque chose dont vous serez fier de partager le lien.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PROCESS ═══════ -->
+<section class="process" id="process">
+  <canvas id="processGL"></canvas>
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kicker">Comment ça marche</div>
+      <h2>De l'idée au site<br>en ligne</h2>
+      <p>Pas de jargon, pas d'attente interminable. Quatre étapes claires, et votre commerce est en ligne.</p>
+    </div>
+    <div class="timeline">
+      <div class="tstep rv"><div class="dot">01</div><h3>Vous choisissez</h3><p>Vous sélectionnez votre forfait et vous nous dites ce que vous voulez : couleurs, style, contenu.</p></div>
+      <div class="tstep rv d1"><div class="dot">02</div><h3>On conçoit</h3><p>On construit votre site sur mesure, sans modèle générique, en respectant votre image de marque.</p></div>
+      <div class="tstep rv d2"><div class="dot">03</div><h3>Vous validez</h3><p>On vous montre le résultat en direct. Vous regardez, vous ressentez, et vous nous dites ce qui doit changer. On ajuste ensemble, tranquillement, jusqu'à ce que le site vous ressemble vraiment et que vous soyez fier de le partager.</p></div>
+      <div class="tstep rv d3"><div class="dot">04</div><h3>C'est en ligne</h3><p>Votre site est publié, prêt à attirer de nouveaux clients. Vous êtes là, vous êtes présent, vous êtes sur la plateforme.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ POURQUOI ═══════ -->
+<section class="why">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kicker">Pourquoi choisir <span class="red">W</span>eb<span class="red">C</span>raft ?</div>
+      <h2>Ce qui nous<br>rend différents</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rv"><div class="why-big" data-count="5">0</div><div class="why-label">jours de livraison</div><p>On ne vous fait pas attendre des semaines. Votre site est prêt en quelques jours.</p></div>
+      <div class="why-card rv d1"><div class="why-big">Fixe</div><div class="why-label">prix transparent</div><p>Un prix clair, affiché d'avance, sans surprise. Vous savez exactement ce que vous payez.</p></div>
+      <div class="why-card rv d2"><div class="why-big">1 mois</div><div class="why-label">de soutien inclus</div><p>Après la mise en ligne, on reste disponibles pour vos questions et ajustements.</p></div>
+      <div class="why-card rv d3"><div class="why-big" data-count="0">0</div><div class="why-label">modèle copié-collé</div><p>Chaque site est unique, pensé pour votre commerce et personne d'autre.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FORFAITS ═══════ -->
+<section class="pricing" id="forfaits">
+  <canvas id="pricingGL"></canvas>
+  <div class="wrap">
+    <div class="head rv" style="text-align:center; margin: 0 auto 54px;">
+      <div class="kicker">Nos forfaits</div>
+      <h2>Un prix clair,<br>deux formules</h2>
+      <p style="margin:0 auto;">Choisissez la formule qui correspond à votre projet. Prix fixe, sans surprise.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card rv">
+        <div class="price-name">Site Vitrine</div>
+        <div class="price-tag">140$</div>
+        <div class="price-note">Forfait unique</div>
+        <ul class="price-list">
+          <li>Thème, couleurs et contenu personnalisés</li>
+          <li>Présentation de votre commerce et vos produits</li>
+          <li>Dépôt de votre menu, on s'occupe du reste</li>
+          <li>Livraison rapide en 3-5 jours</li>
+          <li>Site adapté au téléphone et à l'ordinateur</li>
+          <li>Vos coordonnées et réseaux bien visibles</li>
+        </ul>
+        <a href="#" class="btn btn-primary" onclick="openModal('Vitrine'); return false;">Choisir ce forfait <span class="arrow">→</span></a>
+      </div>
+      <div class="price-card premium rv d1">
+        <div class="price-badge">PREMIUM</div>
+        <div class="price-name">Sur Mesure +</div>
+        <div class="price-tag">230$</div>
+        <div class="price-note">L'expérience complète</div>
+        <div class="price-3d-preview"><canvas id="mini3d"></canvas><span class="p3d-label">3D en direct ◆ inclus</span></div>
+        <ul class="price-list">
+          <li>Tout le forfait Vitrine, en plus complet</li>
+          <li>Comptes clients (connexion, inscription)</li>
+          <li>Paiement en ligne intégré</li>
+          <li>Système de réservation possible</li>
+          <li>Plus de pages, site bilingue possible</li>
+          <li class="feat-3d">Animations 3D intégrées à votre site</li>
+        </ul>
+        <a href="#" class="btn btn-primary" onclick="openModal('Sur Mesure +'); return false;">Choisir ce forfait <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA FINAL ═══════ -->
+<section class="final">
+  <canvas class="echo-3d" id="echoGL"></canvas>
+  <div class="final-inner rv">
+    <h2 class="anton">Votre commerce mérite<br>un site à sa hauteur.</h2>
+    <p class="final-big">Votre avenir se construit en ligne, et il commence aujourd'hui. Avec <span class="red">W</span>eb<span class="red">C</span>raft, votre commerce avance, se démarque et attire les clients qu'il mérite. Fini l'époque où l'on passait à côté de vous : votre site travaille pour vous, jour et nuit. On vous donne les moyens des plus grands, à un prix juste et sans complications. <span class="red">W</span>eb<span class="red">C</span>raft va de l'avant — et vous emmène avec.</p>
+    <a href="#" class="btn btn-primary" onclick="openModal('Vitrine'); return false;">Débuter mon projet <span class="arrow">→</span></a>
+    <div class="final-reassure"><span>✓ Livraison rapide</span><span>✓ Prix transparent</span><span>✓ Soutien inclus</span></div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer id="contact">
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <a class="foot-box" href="mailto:webcraftinnov26@gmail.com">
+        <svg viewBox="0 0 40 40"><rect x="7" y="11" width="26" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 13l12 9 12-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        Courriel
+      </a>
+      <a class="foot-box" href="https://www.instagram.com/webcraft.inv?igsh=MXFjeDQ1NGkzazM2bg%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+        <svg viewBox="0 0 40 40"><rect x="9" y="9" width="22" height="22" rx="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="26.5" cy="13.5" r="1.6" fill="currentColor"/></svg>
+        Instagram
+      </a>
+      <a class="foot-box" href="tel:5142906183">
+        <svg viewBox="0 0 40 40"><path d="M12 9h5l2 6-3 2q2 6 7 8l2-3 6 2v5q0 2-2 2Q18 33 10 23 9 21 9 12 9 9 12 9Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        Téléphone
+      </a>
+    </div>
+    <div class="foot-bottom">
+      <div class="brand"><span class="main"><span class="red">W</span>EB<span class="red">C</span>RAFT</span></div>
+      <div class="foot-socials"><a href="tel:5142906183">514-290-6183</a><a href="mailto:webcraftinnov26@gmail.com">webcraftinnov26@gmail.com</a></div>
+      <div style="opacity:.5; font-size:.82rem;">© 2026 WebCraft Innovations — Tous droits réservés · Laval, Québec</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════ PAGE CONTACT ═══════ -->
+<div class="contact-page" id="contactPage">
+  <canvas class="contact-gl" id="contactGL"></canvas>
+  <button class="contact-back" onclick="closeContactPage()" aria-label="Fermer">←</button>
+  <div class="contact-inner">
+    <div class="contact-kicker">Contact</div>
+    <h2 class="contact-title anton">Parlons de<br>votre projet</h2>
+    <p class="contact-sub">Une question, une idée, un commerce à faire décoller ? Écrivez-nous ou appelez-nous directement — on répond vite.</p>
+    <div class="contact-cards">
+      <a class="contact-card" href="mailto:webcraftinnov26@gmail.com">
+        <div class="cc-glow"></div>
+        <svg class="cc-icon" viewBox="0 0 48 48"><rect x="8" y="13" width="32" height="22" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M9 15l15 12 15-12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <div class="cc-label">Courriel</div>
+        <div class="cc-value">webcraftinnov26@gmail.com</div>
+        <div class="cc-action">Ouvrir dans Gmail →</div>
+      </a>
+      <a class="contact-card" href="tel:5142906183">
+        <div class="cc-glow"></div>
+        <svg class="cc-icon" viewBox="0 0 48 48"><path d="M14 10h6l2.5 7-3.5 2.4q2.4 7 8.6 9.6l2.4-3.5 7 2.5v6q0 2.5-2.5 2.5Q22 40 12 30 8 26 8 14.5 8 10 14 10Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <div class="cc-label">Téléphone</div>
+        <div class="cc-value">514-290-6183</div>
+        <div class="cc-action">Appeler maintenant →</div>
+      </a>
+      <a class="contact-card" href="https://www.instagram.com/webcraft.inv?igsh=MXFjeDQ1NGkzazM2bg%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+        <div class="cc-glow"></div>
+        <svg class="cc-icon" viewBox="0 0 48 48"><rect x="11" y="11" width="26" height="26" rx="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="24" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="32" cy="16" r="1.9" fill="currentColor"/></svg>
+        <div class="cc-label">Instagram</div>
+        <div class="cc-value">@webcraft.inv</div>
+        <div class="cc-action">Voir le profil →</div>
+      </a>
+    </div>
+    <div class="contact-foot"><span class="red">W</span>eb<span class="red">C</span>raft Innovations · Laval, Québec</div>
+  </div>
+</div>
+
+<!-- ═══════ MODALE FORFAIT ═══════ -->
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3 id="modalTitle">Forfait</h3>
+    <p id="modalText">Pour lancer votre projet, contactez-nous directement. On vous répond sous 24-48h.</p>
+    <div class="modal-actions">
+      <a class="btn btn-primary" href="mailto:webcraftinnov26@gmail.com" style="justify-content:center;">Nous écrire par courriel</a>
+      <a class="btn btn-ghost" href="tel:5142906183" style="justify-content:center;">Appeler le 514-290-6183</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* ═══════ 1. Barre de progression + nav ═══════ */
+const nav = document.getElementById('nav');
+const progress = document.getElementById('progress');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  progress.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+  nav.classList.toggle('shrink', h.scrollTop > 40);
+}, { passive: true });
+
+/* ═══════ 2. Menu mobile ═══════ */
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => { burger.classList.toggle('open'); navLinks.classList.toggle('open'); });
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { burger.classList.remove('open'); navLinks.classList.remove('open'); }));
+
+/* ═══════ 4. Reveal au scroll ═══════ */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.14 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ═══════ 5. Compteurs ═══════ */
+const cObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, target = +el.dataset.count;
+    let cur = 0; const step = Math.max(1, target / 40);
+    const tick = () => { cur += step; if (cur >= target) { el.textContent = target; return; } el.textContent = Math.floor(cur); requestAnimationFrame(tick); };
+    tick(); cObs.unobserve(el);
+  });
+}, { threshold: 0.6 });
+document.querySelectorAll('[data-count]').forEach(el => cObs.observe(el));
+
+/* ═══════ 6. Tilt 3D des cartes services ═══════ */
+if (matchMedia('(hover:hover)').matches) {
+  document.querySelectorAll('.tilt').forEach(card => {
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      card.style.transform = `perspective(800px) rotateY(${(px-.5)*12}deg) rotateX(${(.5-py)*12}deg) translateY(-4px)`;
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+    card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+  });
+}
+
+/* ═══════ 7. Modale forfait ═══════ */
+const modal = document.getElementById('modal');
+function openModal(name) {
+  document.getElementById('modalTitle').textContent = 'Forfait ' + name;
+  modal.classList.add('open');
+}
+function closeModal() { modal.classList.remove('open'); }
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeModal();
+    if (typeof closeContactPage === 'function' && document.getElementById('contactPage').classList.contains('open')) closeContactPage();
+  }
+});
+
+/* ═══════ 7b. Page Contact ═══════ */
+const contactPage = document.getElementById('contactPage');
+let contactGLStarted = false;
+let contactGLAlive = false;
+let contactGLResume = null;
+function openContactPage() {
+  contactPage.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  burger.classList.remove('open'); navLinks.classList.remove('open');
+  contactGLAlive = true;
+  if (!contactGLStarted) { contactGLStarted = true; initContactGL(); }
+  else if (contactGLResume) { contactGLResume(); }
+}
+function closeContactPage() { contactPage.classList.remove('open'); document.body.style.overflow = ''; contactGLAlive = false; }
+
+/* Scène 3D de la page contact : anneaux rouges qui pulsent */
+function initContactGL() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('contactGL');
+  if (!canvas) return;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(55, innerWidth/innerHeight, 0.1, 100);
+  camera.position.z = 10;
+  const grp = new THREE.Group(); scene.add(grp);
+  const rings = [];
+  for (let i = 0; i < 6; i++) {
+    const r = new THREE.Mesh(
+      new THREE.TorusGeometry(2 + i * 0.9, 0.05, 16, 80),
+      new THREE.MeshBasicMaterial({ color: 0xE0324A, transparent: true, opacity: 0.5 - i * 0.06 })
+    );
+    r.rotation.x = Math.PI / 2.4;
+    r.userData = { ph: i * 0.6 };
+    grp.add(r); rings.push(r);
+  }
+  scene.add(new THREE.AmbientLight(0xffffff, 1));
+  const mouse = { x: 0, y: 0 };
+  addEventListener('pointermove', e => { mouse.x = (e.clientX/innerWidth)*2-1; mouse.y = (e.clientY/innerHeight)*2-1; });
+  function resize() { renderer.setSize(innerWidth, innerHeight, false); camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  const clock = new THREE.Clock();
+  function loop() {
+    if (!contactGLAlive) return;
+    requestAnimationFrame(loop);
+    const t = clock.getElapsedTime();
+    rings.forEach((r, i) => { const s = 1 + Math.sin(t * 1.2 + r.userData.ph) * 0.08; r.scale.setScalar(s); r.rotation.z = t * 0.1 * (i%2?1:-1); });
+    grp.rotation.x = mouse.y * 0.3 + Math.PI * 0.02;
+    grp.rotation.y = mouse.x * 0.3;
+    renderer.render(scene, camera);
+  }
+  contactGLResume = loop;
+  loop();
+}
+
+/* ═══════ 7c. "Voir les services" — arrivée créative ═══════ */
+document.querySelectorAll('a[href="#services"]').forEach(a => {
+  a.addEventListener('click', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.svc').forEach((c, i) => {
+        c.style.animation = 'none'; void c.offsetWidth;
+        c.style.animation = `svcPulse .7s ${i*0.1}s cubic-bezier(.3,1.6,.4,1)`;
+      });
+    }, 600);
+  });
+});
+
+/* ═══════ 8. Amb orbs ═══════ */
+[['.services',70,10],['.why',20,60],['.pricing',75,20],['.process',15,55]].forEach(([sel,l,t]) => {
+  const s = document.querySelector(sel); if (!s) return;
+  const o = document.createElement('div');
+  o.className = 'amb'; const size = 300 + Math.random()*200;
+  o.style.width = o.style.height = size+'px';
+  o.style.background = 'radial-gradient(circle, rgba(224,50,74,.18), transparent 70%)';
+  o.style.left = l+'%'; o.style.top = t+'%';
+  s.insertBefore(o, s.firstChild);
+});
+
+/* ═══════ 9. HERO 3D — grille de blocs "site" qui ondulent ═══════
+   Une grille de cubes rouges/sombres qui ondulent comme une vague,
+   réagit à la souris (profondeur + parallaxe). Évoque des blocs
+   de site web qui s'assemblent. */
+(function initHero() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('heroGL');
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0a0a0b, 0.055);
+  const camera = new THREE.PerspectiveCamera(55, innerWidth/innerHeight, 0.1, 100);
+  camera.position.set(0, 6, 14);
+  camera.lookAt(0, 0, 0);
+
+  const group = new THREE.Group();
+  scene.add(group);
+
+  // Grille de cubes
+  const COLS = 18, ROWS = 18, GAP = 1.05;
+  const cubes = [];
+  const geo = new THREE.BoxGeometry(0.55, 0.55, 0.55);
+  for (let x = 0; x < COLS; x++) {
+    for (let z = 0; z < ROWS; z++) {
+      const isRed = Math.random() > 0.82;
+      const mat = new THREE.MeshStandardMaterial({
+        color: isRed ? 0xE0324A : 0x1a1a1f,
+        metalness: 0.5, roughness: 0.45,
+        emissive: isRed ? 0x3a0a12 : 0x000000, emissiveIntensity: 0.6
+      });
+      const cube = new THREE.Mesh(geo, mat);
+      cube.position.set((x - COLS/2) * GAP, 0, (z - ROWS/2) * GAP);
+      cube.userData = { x, z };
+      group.add(cube);
+      cubes.push(cube);
+    }
+  }
+
+  // Lumières
+  const key = new THREE.DirectionalLight(0xffffff, 1.6); key.position.set(5, 12, 8); scene.add(key);
+  const rim = new THREE.PointLight(0xE0324A, 2.2, 40); rim.position.set(0, 6, 0); scene.add(rim);
+  scene.add(new THREE.AmbientLight(0x2a2430, 0.9));
+
+  const mouse = { x: 0, y: 0 };
+  addEventListener('pointermove', (e) => {
+    mouse.x = (e.clientX / innerWidth) * 2 - 1;
+    mouse.y = (e.clientY / innerHeight) * 2 - 1;
+  });
+
+  function resize() {
+    renderer.setSize(innerWidth, innerHeight, false);
+    camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+  }
+  addEventListener('resize', resize); resize();
+
+  const clock = new THREE.Clock();
+  let heroAlive = true;
+  function animate() {
+    if (!heroAlive) return;
+    requestAnimationFrame(animate);
+    const t = clock.getElapsedTime();
+    // Vague sur la hauteur des cubes
+    cubes.forEach(c => {
+      const d = Math.hypot(c.userData.x - COLS/2, c.userData.z - ROWS/2);
+      c.position.y = Math.sin(d * 0.6 - t * 1.6) * 0.9;
+      c.rotation.y = t * 0.15;
+      c.scale.y = 1 + (c.position.y + 0.9) * 0.4;
+    });
+    // Rotation lente + parallaxe souris
+    group.rotation.y += 0.0016;
+    camera.position.x += ((mouse.x * 4) - camera.position.x) * 0.03;
+    camera.position.y += ((6 - mouse.y * 2) - camera.position.y) * 0.03;
+    camera.lookAt(0, 0, 0);
+    renderer.render(scene, camera);
+  }
+  animate();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { if (!heroAlive) { heroAlive = true; animate(); } }
+      else { heroAlive = false; }
+    }), { threshold: 0 }).observe(canvas.closest('.hero'));
+  }
+})();
+
+/* ═══════ 9b. Mini scène 3D dans la carte Sur Mesure + ═══════ */
+(function initMini3D() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('mini3d');
+  if (!canvas) return;
+  const box = canvas.parentElement;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(50, box.clientWidth / box.clientHeight, 0.1, 100);
+  camera.position.z = 5;
+
+  // Petit "cube de site" doré qui tourne
+  const grp = new THREE.Group(); scene.add(grp);
+  const mat = new THREE.MeshStandardMaterial({ color: 0xc9a227, metalness: .8, roughness: .25, emissive: 0x2a2008, emissiveIntensity: .5 });
+  const cube = new THREE.Mesh(new THREE.BoxGeometry(1.6, 1.6, 1.6), mat);
+  grp.add(cube);
+  const wire = new THREE.Mesh(new THREE.BoxGeometry(1.75, 1.75, 1.75), new THREE.MeshBasicMaterial({ color: 0xc9a227, wireframe: true, transparent: true, opacity: .25 }));
+  grp.add(wire);
+  const mini3dLight1 = new THREE.DirectionalLight(0xffffff, 2); mini3dLight1.position.set(3, 4, 5); scene.add(mini3dLight1);
+  const mini3dLight2 = new THREE.PointLight(0xc9a227, 2, 20); mini3dLight2.position.set(-3, 0, 4); scene.add(mini3dLight2);
+  scene.add(new THREE.AmbientLight(0x333333, 1));
+
+  const mouse = { x: 0, y: 0 };
+  box.addEventListener('pointermove', (e) => {
+    const r = box.getBoundingClientRect();
+    mouse.x = (e.clientX - r.left) / r.width - .5;
+    mouse.y = (e.clientY - r.top) / r.height - .5;
+  });
+  function resize() { renderer.setSize(box.clientWidth, box.clientHeight, false); camera.aspect = box.clientWidth/box.clientHeight; camera.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  const clock = new THREE.Clock();
+  let mini3dAlive = true;
+  function loop() {
+    if (!mini3dAlive) return;
+    requestAnimationFrame(loop);
+    const t = clock.getElapsedTime();
+    grp.rotation.y += 0.01 + mouse.x * 0.04;
+    grp.rotation.x += (mouse.y * 0.5 - grp.rotation.x) * 0.05;
+    grp.position.y = Math.sin(t) * 0.12;
+    renderer.render(scene, camera);
+  }
+  loop();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { if (!mini3dAlive) { mini3dAlive = true; loop(); } }
+      else { mini3dAlive = false; }
+    }), { threshold: 0 }).observe(box);
+  }
+})();
+
+/* ═══════ 9c. Fond 3D de la section Forfaits (écrans de code qui flottent) ═══════ */
+(function initPricingGL() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('pricingGL');
+  if (!canvas) return;
+  const sec = canvas.parentElement;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x111114, 0.03);
+  const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
+  camera.position.z = 13;
+
+  const grp = new THREE.Group(); scene.add(grp);
+
+  // Plusieurs "écrans d'ordinateur" flottants avec des lignes de code
+  const screens = [];
+  function makeScreen(x, y, z, s) {
+    const g = new THREE.Group();
+    // dalle
+    const panel = new THREE.Mesh(
+      new THREE.BoxGeometry(3.2, 2.1, 0.12),
+      new THREE.MeshStandardMaterial({ color: 0x14141a, metalness: .5, roughness: .4, emissive: 0x0a0a0f, emissiveIntensity: .6 })
+    );
+    g.add(panel);
+    // barre de titre rouge
+    const bar = new THREE.Mesh(new THREE.PlaneGeometry(3.2, 0.34), new THREE.MeshBasicMaterial({ color: 0xE0324A }));
+    bar.position.set(0, 0.88, 0.07); g.add(bar);
+    // lignes de code
+    for (let i = 0; i < 5; i++) {
+      const w = 0.6 + Math.random() * 1.9;
+      const red = Math.random() > 0.6;
+      const line = new THREE.Mesh(
+        new THREE.PlaneGeometry(w, 0.12),
+        new THREE.MeshBasicMaterial({ color: red ? 0xE0324A : 0x444450 })
+      );
+      line.position.set(-1.4 + w/2, 0.4 - i * 0.32, 0.07);
+      g.add(line);
+    }
+    g.position.set(x, y, z);
+    g.scale.setScalar(s);
+    g.userData = { baseY: y, ph: Math.random() * 6, sp: 0.4 + Math.random() * 0.5, rot: (Math.random()-.5)*0.3 };
+    grp.add(g);
+    screens.push(g);
+  }
+  makeScreen(-5, 1.5, -2, 1);
+  makeScreen(5.2, -1, -1, 1.15);
+  makeScreen(-4.5, -2.5, -4, 0.9);
+  makeScreen(4.5, 2.5, -5, 0.8);
+  makeScreen(0, 0, -7, 1.3);
+
+  // Petits cubes rouges qui flottent (éléments de site)
+  const cubes = [];
+  for (let i = 0; i < 14; i++) {
+    const c = new THREE.Mesh(
+      new THREE.BoxGeometry(0.35, 0.35, 0.35),
+      new THREE.MeshStandardMaterial({ color: 0xE0324A, metalness: .6, roughness: .35, emissive: 0x2a0a10, emissiveIntensity: .6 })
+    );
+    c.position.set((Math.random()-.5)*16, (Math.random()-.5)*10, (Math.random()-.5)*6 - 2);
+    c.userData = { sp: 0.5 + Math.random(), ph: Math.random()*6 };
+    grp.add(c); cubes.push(c);
+  }
+
+  const pricingLight1 = new THREE.DirectionalLight(0xffffff, 1.6); pricingLight1.position.set(4, 6, 10); scene.add(pricingLight1);
+  const pricingLight2 = new THREE.PointLight(0xE0324A, 2.4, 50); pricingLight2.position.set(0, 0, 6); scene.add(pricingLight2);
+  scene.add(new THREE.AmbientLight(0x333333, 1));
+
+  const mouse = { x: 0, y: 0 };
+  addEventListener('pointermove', e => { mouse.x = (e.clientX/innerWidth)*2-1; mouse.y = (e.clientY/innerHeight)*2-1; });
+  function resize() { const w = sec.clientWidth, h = sec.clientHeight; renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  const clock = new THREE.Clock();
+  let pricingAlive = true;
+  function loop() {
+    if (!pricingAlive) return;
+    requestAnimationFrame(loop);
+    const t = clock.getElapsedTime();
+    screens.forEach(s => {
+      s.position.y = s.userData.baseY + Math.sin(t * s.userData.sp + s.userData.ph) * 1.1;
+      s.rotation.y = Math.sin(t * 0.4 + s.userData.ph) * 0.35 + s.userData.rot;
+      s.rotation.x = Math.cos(t * 0.3 + s.userData.ph) * 0.18;
+    });
+    cubes.forEach(c => { c.rotation.x += 0.01; c.rotation.y += 0.014; c.position.y += Math.sin(t*c.userData.sp + c.userData.ph)*0.003; });
+    grp.rotation.y = mouse.x * 0.25;
+    grp.rotation.x = mouse.y * 0.14;
+    camera.position.x += (mouse.x * 1.5 - camera.position.x) * 0.03;
+    camera.lookAt(0, 0, -3);
+    renderer.render(scene, camera);
+  }
+  loop();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { if (!pricingAlive) { pricingAlive = true; loop(); } }
+      else { pricingAlive = false; }
+    }), { threshold: 0 }).observe(sec);
+  }
+})();
+
+/* ═══════ 9d. Grand "W" 3D qui tourne (fond du CTA final) ═══════ */
+(function initEchoGL() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('echoGL');
+  if (!canvas) return;
+  const sec = canvas.parentElement;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+  camera.position.z = 9;
+
+  // Lettre "W" construite en extrudant une forme
+  const shape = new THREE.Shape();
+  const th = 0.9; // épaisseur des branches
+  shape.moveTo(-3, 2.4);
+  shape.lineTo(-3 + th, 2.4);
+  shape.lineTo(-1.5, -1.2);
+  shape.lineTo(0, 1.4);
+  shape.lineTo(1.5, -1.2);
+  shape.lineTo(3 - th, 2.4);
+  shape.lineTo(3, 2.4);
+  shape.lineTo(1.7, -2.4);
+  shape.lineTo(0.9, -2.4);
+  shape.lineTo(0, 0.2);
+  shape.lineTo(-0.9, -2.4);
+  shape.lineTo(-1.7, -2.4);
+  shape.lineTo(-3, 2.4);
+  const wGeo = new THREE.ExtrudeGeometry(shape, { depth: 0.7, bevelEnabled: true, bevelThickness: 0.12, bevelSize: 0.1, bevelSegments: 2 });
+  wGeo.center();
+  const wMat = new THREE.MeshStandardMaterial({ color: 0xE0324A, metalness: .7, roughness: .3, emissive: 0x2a0a10, emissiveIntensity: .5 });
+  const W = new THREE.Mesh(wGeo, wMat);
+  W.scale.set(1.4, 1.4, 1.4);
+  scene.add(W);
+
+  const echoLight1 = new THREE.DirectionalLight(0xffffff, 2); echoLight1.position.set(4, 5, 8); scene.add(echoLight1);
+  const echoLight2 = new THREE.PointLight(0xff5a72, 1.6, 40); echoLight2.position.set(-5, 0, 5); scene.add(echoLight2);
+  scene.add(new THREE.AmbientLight(0x1a1a1a, 1));
+
+  const mouse = { x: 0, y: 0 };
+  addEventListener('pointermove', e => { mouse.x = (e.clientX/innerWidth)*2-1; mouse.y = (e.clientY/innerHeight)*2-1; });
+  function resize() { const w = sec.clientWidth, h = sec.clientHeight; renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  const clock = new THREE.Clock();
+  let echoAlive = true;
+  function loop() {
+    if (!echoAlive) return;
+    requestAnimationFrame(loop);
+    const t = clock.getElapsedTime();
+    W.rotation.y += 0.012;              // tourne sur lui-même
+    W.rotation.x = Math.sin(t*0.5)*0.15 + mouse.y*0.2;
+    W.rotation.z = Math.sin(t*0.3)*0.05;
+    renderer.render(scene, camera);
+  }
+  loop();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { if (!echoAlive) { echoAlive = true; loop(); } }
+      else { echoAlive = false; }
+    }), { threshold: 0 }).observe(sec);
+  }
+})();
+
+/* ═══════ 9e. Dynamisme 3D au défilement ═══════ */
+(function scrollDynamism() {
+  const heads = document.querySelectorAll('.head h2');
+  let ticking = false;
+  function update() {
+    const vh = innerHeight;
+    // Titres de section : léger mouvement 3D selon la position
+    heads.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh && r.bottom > 0) {
+        const off = (r.top + r.height/2 - vh/2) / vh; // -1..1
+        el.style.transform = `perspective(1000px) rotateX(${off * -6}deg) translateY(${off * 14}px)`;
+      }
+    });
+    ticking = false;
+  }
+  addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
+  update();
+})();
+
+/* ═══════ 9f. Fond animé "Threads" — section De l'idée au site ═══════
+   Lignes verticales ondulantes (WebGL brut, très léger) : le fil de
+   l'idée qui devient site. Rouge WebCraft, pause hors écran,
+   désactivé si prefers-reduced-motion. */
+(function initProcessThreads() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const canvas = document.getElementById('processGL');
+  if (!canvas) return;
+  const sec = canvas.parentElement;
+
+  const FRAG = `
+precision highp float;
+varying vec2 vUv;
+uniform vec2 iRes; uniform float iTime;
+uniform vec3 uColor; uniform float uAmp; uniform float uDist;
+void main(){
+  vec2 uv = vUv; vec2 p = uv * 2. - 1.; p.x *= iRes.x / iRes.y;
+  float lines = 0.;
+  for(float i=0.; i<40.; i++){
+    float x0 = (i / 40.) * 2. - 1.; x0 *= iRes.x / iRes.y;
+    float wave = sin(p.y * 2. + iTime * .8 + i * .5) * .12 * uAmp;
+    float dx = abs(p.x - x0 - wave);
+    float thickness = .003 + .002 * sin(iTime + i);
+    float line = smoothstep(thickness*2., 0., dx);
+    float fade = smoothstep(uDist, 0., abs(p.y));
+    lines += line * fade * .8;
+  }
+  vec3 col = uColor * lines * 1.6;
+  col += uColor * exp(-length(p)*1.5) * .05;
+  gl_FragColor = vec4(col, 1.);
+}`;
+
+  const gl = canvas.getContext('webgl', { alpha: true, antialias: false, premultipliedAlpha: false });
+  if (!gl) return;
+  const vsrc = 'attribute vec2 p; varying vec2 vUv; void main(){ vUv = p*.5+.5; gl_Position = vec4(p,0.,1.); }';
+  function sh(t, s){ const x = gl.createShader(t); gl.shaderSource(x, s); gl.compileShader(x);
+    if (!gl.getShaderParameter(x, gl.COMPILE_STATUS)) console.warn(gl.getShaderInfoLog(x)); return x; }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, sh(gl.VERTEX_SHADER, vsrc));
+  gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FRAG));
+  gl.linkProgram(prog); gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(prog, 'p');
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+  // RE-THEME : rouge WebCraft #E0324A → 0-1
+  gl.uniform3f(gl.getUniformLocation(prog, 'uColor'), 224/255, 50/255, 74/255);
+  gl.uniform1f(gl.getUniformLocation(prog, 'uAmp'), 3.0);
+  gl.uniform1f(gl.getUniformLocation(prog, 'uDist'), 0.9);
+  const uRes = gl.getUniformLocation(prog, 'iRes');
+  const uTime = gl.getUniformLocation(prog, 'iTime');
+
+  function resize() {
+    const dpr = Math.min(devicePixelRatio || 1, 1.5);
+    const w = sec.clientWidth, h = sec.clientHeight;
+    canvas.width = w * dpr; canvas.height = h * dpr;
+    canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+    gl.viewport(0, 0, canvas.width, canvas.height);
+  }
+  addEventListener('resize', resize); resize();
+
+  let alive = false, raf = null;
+  const t0 = performance.now();
+  function loop() {
+    if (!alive) return;
+    raf = requestAnimationFrame(loop);
+    gl.useProgram(prog);
+    gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.uniform1f(uTime, (performance.now() - t0) / 1000);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  }
+  new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { if (!alive) { alive = true; loop(); } }
+    else { alive = false; if (raf) cancelAnimationFrame(raf); }
+  }), { threshold: 0 }).observe(sec);
+})();
+
+/* ═══════ 10. TRADUCTION FR / ENG ═══════ */
+(function initI18n() {
+  const dict = {
+    "Accueil":"Home","Services":"Services","Forfaits":"Packages","Contact":"Contact",
+    "Création de sites":"Custom website","sur mesure":"design",
+    "Des sites conçus":"Websites built","pour ":"for ","votre commerce":"your business",
+    "livrés vite et bien faits.":"delivered fast and well made.",
+    "WebCraft vous crée un site qui reflète vos idées et vos concepts — rapide, propre, et pensé pour attirer de vrais clients.":"WebCraft builds you a website that reflects your ideas and concepts — fast, clean, and designed to attract real customers.",
+    "Débuter mon projet":"Start my project","Voir les services":"View services","DÉFILER":"SCROLL",
+    "Nos services":"Our services",
+    "Des solutions web":"Web solutions","pour votre commerce":"for your business",
+    "Restauration, coiffure, vente, artisanat, produits uniques, marques de vêtements, salons de beauté — peu importe votre domaine, WebCraft construit le site qui vous ressemble. Notre idée est simple : un commerce qui n'est pas visible en ligne aujourd'hui, c'est un commerce qui laisse partir des clients vers la concurrence. On crée des sites qui montrent votre commerce sous son meilleur jour, qui donnent confiance dès le premier coup d'œil, et qui transforment les visiteurs en vrais clients. Chaque site est pensé pour votre réalité : vos produits, vos couleurs, votre ambiance, votre clientèle. Pas de modèle générique recopié d'un commerce à l'autre — on part de qui vous êtes pour construire quelque chose d'unique. Notre but n'est pas juste de vous faire « un site » : c'est de vous donner un outil qui travaille pour vous, qui vous rapporte des appels, des réservations et des ventes, même quand vous dormez. Un site rapide, moderne, qui fonctionne aussi bien sur téléphone que sur ordinateur, et qui met votre commerce à la hauteur des plus grands.":"Restaurants, salons, retail, craft, unique products, clothing brands, beauty salons — whatever your field, WebCraft builds the site that fits you. Our idea is simple: a business that isn't visible online today is a business letting customers slip away to competitors. We build sites that show your business at its best, that inspire trust at first glance, and that turn visitors into real customers. Every site is designed for your reality: your products, your colors, your vibe, your clientele. No generic template copied from one business to the next — we start from who you are to build something unique. Our goal isn't just to make you 'a website': it's to give you a tool that works for you, that brings in calls, bookings and sales, even while you sleep. A fast, modern site that works just as well on phone as on desktop, putting your business on par with the biggest players.",
+    "Site vitrine":"Showcase site","Site sur mesure":"Custom site","Boutique en ligne":"Online store","Refonte & mise à jour":"Redesign & updates",
+    "Une présence en ligne claire et professionnelle pour présenter votre activité, vos produits et vos coordonnées. C'est la carte de visite moderne de votre commerce : dès qu'un client vous cherche, il vous trouve et voit tout de suite qui vous êtes. On met en valeur ce qui vous rend unique, avec un design soigné qui inspire confiance et donne envie de vous contacter. Idéal pour être visible rapidement et sérieusement.":"A clear, professional online presence to showcase your business, products and contact details. It's your business's modern calling card: the moment a customer looks for you, they find you and instantly see who you are. We highlight what makes you unique, with a polished design that builds trust and makes people want to reach out. Ideal to become visible quickly and seriously.",
+    "Un site entièrement pensé selon vos besoins et votre image, sans modèle générique. Vous décrivez votre vision, vos envies, votre ambiance, et nous la transformons en un site unique qui ne ressemble à aucun autre. Chaque détail est travaillé pour coller à votre marque : couleurs, animations, structure, ton. C'est le choix de ceux qui veulent vraiment se démarquer et marquer les esprits dès la première visite.":"A site fully designed around your needs and image, no generic template. You describe your vision, your wishes, your vibe, and we turn it into a unique site unlike any other. Every detail is crafted to match your brand: colors, animations, structure, tone. It's the choice for those who truly want to stand out and leave a mark from the very first visit.",
+    "Vendez vos produits directement depuis votre site, 24 heures sur 24, sans dépendre uniquement des réseaux sociaux. On construit une boutique avec une présentation soignée de chaque produit et une navigation simple qui donne envie d'acheter. Vos clients commandent en quelques clics, et vous, vous gérez tout facilement. C'est votre commerce ouvert en permanence, même quand votre local est fermé.":"Sell your products directly from your site, 24/7, without relying solely on social media. We build a store with a polished presentation of each product and simple navigation that makes people want to buy. Your customers order in a few clicks, and you manage everything easily. It's your business open around the clock, even when your doors are closed.",
+    "Votre site est dépassé, lent ou mal adapté au téléphone ? On lui redonne une seconde vie. On le modernise, on le rend plus rapide, plus clair et parfaitement adapté à tous les écrans. Un site vieillissant fait fuir les clients sans que vous le sachiez ; un site moderne, lui, les rassure et les retient. On repart de l'existant pour en faire quelque chose dont vous serez fier de partager le lien.":"Is your site outdated, slow or poorly adapted to phones? We give it a second life. We modernize it, make it faster, clearer and perfectly adapted to every screen. An aging site drives customers away without you knowing; a modern one reassures and keeps them. We build on what exists to make something you'll be proud to share.",
+    "Comment ça marche":"How it works","De l'idée au site":"From idea to","en ligne":"live website",
+    "Pas de jargon, pas d'attente interminable. Quatre étapes claires, et votre commerce est en ligne.":"No jargon, no endless waiting. Four clear steps, and your business is online.",
+    "On vous montre le résultat en direct. Vous regardez, vous ressentez, et vous nous dites ce qui doit changer. On ajuste ensemble, tranquillement, jusqu'à ce que le site vous ressemble vraiment et que vous soyez fier de le partager.":"We show you the result live. You look, you feel it, and you tell us what should change. We adjust together, calmly, until the site truly reflects you and you're proud to share it.",
+    "Votre site est publié, prêt à attirer de nouveaux clients. Vous êtes là, vous êtes présent, vous êtes sur la plateforme.":"Your site is published, ready to attract new customers. You're there, you're present, you're on the platform.",
+    "Pourquoi choisir WebCraft ?":"Why choose WebCraft?",
+    "Votre avenir se construit en ligne, et il commence aujourd'hui. Avec WebCraft, votre commerce avance, se démarque et attire les clients qu'il mérite. Fini l'époque où l'on passait à côté de vous : votre site travaille pour vous, jour et nuit. On vous donne les moyens des plus grands, à un prix juste et sans complications. WebCraft va de l'avant — et vous emmène avec.":"Your future is built online, and it starts today. With WebCraft, your business moves forward, stands out and attracts the customers it deserves. No more being overlooked: your site works for you, day and night. We give you the tools of the biggest players, at a fair price and with no hassle. WebCraft moves forward — and takes you along.",
+    "Parlons de":"Let's talk about","votre projet":"your project",
+    "Une question, une idée, un commerce à faire décoller ? Écrivez-nous ou appelez-nous directement — on répond vite.":"A question, an idea, a business to launch? Write to us or call us directly — we reply fast.",
+    "Ouvrir dans Gmail →":"Open in Gmail →","Appeler maintenant →":"Call now →","Voir le profil →":"View profile →",
+    "WebCraft Innovations · Laval, Québec":"WebCraft Innovations · Laval, Quebec",
+    "Vous choisissez":"You choose","On conçoit":"We design","Vous validez":"You approve","C'est en ligne":"It's live",
+    "Vous sélectionnez votre forfait et vous nous dites ce que vous voulez : couleurs, style, contenu.":"You pick your package and tell us what you want: colors, style, content.",
+    "On construit votre site sur mesure, sans modèle générique, en respectant votre image de marque.":"We build your custom site, no generic template, respecting your brand image.",
+    "On vous montre le résultat. Vous demandez vos ajustements jusqu'à ce que ce soit parfait.":"We show you the result. You request changes until it's perfect.",
+    "Votre site est publié, rapide et prêt à attirer de nouveaux clients. On reste là si vous avez besoin.":"Your site is published, fast and ready to attract new customers. We stay available if you need us.",
+    "Pourquoi WebCraft":"Why WebCraft","Pourquoi ":"Why ","raft":"raft","Ce qui nous":"What makes us","rend différents":"different",
+    "jours de livraison":"days delivery","prix transparent":"transparent price","de soutien inclus":"of support included","modèle copié-collé":"copy-paste template",
+    "On ne vous fait pas attendre des semaines. Votre site est prêt en quelques jours.":"We don't make you wait weeks. Your site is ready in a few days.",
+    "Un prix fixe, affiché, sans surprise. Vous savez exactement ce que vous payez.":"A fixed, displayed price, no surprises. You know exactly what you pay.",
+    "Après la mise en ligne, on reste disponibles pour vos questions et ajustements.":"After launch, we stay available for your questions and tweaks.",
+    "Chaque site est unique, pensé pour votre commerce et personne d'autre.":"Every site is unique, designed for your business and no one else.",
+    "Nos forfaits":"Our packages","Un prix clair,":"One clear price,","deux formules":"two options",
+    "Choisissez la formule qui correspond à votre projet. Prix fixe, sans surprise.":"Choose the option that fits your project. Fixed price, no surprises.",
+    "Site Vitrine":"Showcase Site","Sur Mesure +":"Custom +","Forfait unique":"Single package","L'expérience complète":"The complete experience",
+    "Thème, couleurs et contenu personnalisés":"Custom theme, colors and content",
+    "Présentation de votre commerce et vos produits":"Showcase your business and products",
+    "Dépôt de votre menu, on s'occupe du reste":"Upload your menu, we handle the rest",
+    "Livraison rapide en 3-5 jours":"Fast delivery in 3-5 days",
+    "Site adapté au téléphone et à l'ordinateur":"Works on phone and desktop",
+    "Vos coordonnées et réseaux bien visibles":"Your contact info and socials clearly shown","1 mois de soutien inclus":"1 month of support included",
+    "Tout le forfait Vitrine, en plus complet":"Everything in Showcase, more complete",
+    "Comptes clients (connexion, inscription)":"Customer accounts (login, sign-up)",
+    "Paiement en ligne intégré":"Integrated online payment",
+    "Système de réservation possible":"Booking system available",
+    "Plus de pages, site bilingue possible":"More pages, bilingual site available",
+    "Animations 3D intégrées à votre site":"3D animations built into your site",
+    "3D en direct ◆ inclus":"Live 3D ◆ included",
+    "Fixe":"Fair","Un prix clair, affiché d'avance, sans surprise. Vous savez exactement ce que vous payez.":"A clear price, shown upfront, no surprises. You know exactly what you pay.",
+    "Choisir ce forfait":"Choose this package",
+    "Votre commerce mérite":"Your business deserves","un site à sa hauteur.":"a website worthy of it.",
+    "Rejoignez les commerçants qui ont choisi la simplicité, la vitesse et un prix juste. Votre projet peut commencer aujourd'hui.":"Join the businesses that chose simplicity, speed and a fair price. Your project can start today.",
+    "✓ Livraison rapide":"✓ Fast delivery","✓ Prix transparent":"✓ Transparent price","✓ Soutien inclus":"✓ Support included",
+    "Courriel":"Email","Instagram":"Instagram","Téléphone":"Phone",
+    "© 2025 WebCraft Innovations — Tous droits réservés · Laval, Québec":"© 2025 WebCraft Innovations — All rights reserved · Laval, Quebec",
+    "Nous écrire par courriel":"Email us","Appeler le 514-290-6183":"Call 514-290-6183",
+    "Pour lancer votre projet, contactez-nous directement. On vous répond sous 24-48h.":"To start your project, contact us directly. We reply within 24-48h.",
+    "SITES VITRINES":"SHOWCASE SITES","BOUTIQUES EN LIGNE":"ONLINE STORES","SUR MESURE":"CUSTOM","REFONTE":"REDESIGN","LIVRÉ EN 3-5 JOURS":"DELIVERED IN 3-5 DAYS"
+  };
+  const inv = {}; Object.keys(dict).forEach(k => inv[dict[k]] = k);
+  let lang = 'fr';
+  const btn = document.getElementById('langBtn');
+  function swap(map) {
+    const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(n){ if(!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        const p=n.parentNode; if(p&&(p.tagName==='SCRIPT'||p.tagName==='STYLE')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT; } });
+    const nodes=[]; while(w.nextNode()) nodes.push(w.currentNode);
+    nodes.forEach(n => { const k=n.nodeValue.trim(); if(map[k]) n.nodeValue = n.nodeValue.replace(k, map[k]); });
+  }
+  btn.addEventListener('click', () => {
+    if (lang==='fr'){ swap(dict); lang='en'; btn.textContent='FR'; document.documentElement.lang='en'; }
+    else { swap(inv); lang='fr'; btn.textContent='ENG'; document.documentElement.lang='fr'; }
+  });
+})();
+</script>
+</body>
+</html>
