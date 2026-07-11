@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebCraft Innovations — Création de sites web premium à Laval</title>
+<meta name="description" content="WebCraft crée des sites web modernes et haut de gamme pour commerces et entrepreneurs : sites vitrines, restaurants, salons, cliniques. Prix fixe dès 140$, livraison rapide. Laval, Québec.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WebCraft — Sites web premium à prix fixe">
+<meta property="og:description" content="WebCraft vous crée une présence en ligne qui transforme les visiteurs en clients. Deux formules claires : Site Vitrine 140$ ou Sur Mesure + 230$. Laval, Québec.">
+<meta property="og:locale" content="fr_CA">
+<link rel="canonical" href="https://webcraftinnov26-del.github.io/WebCraft/">
+<meta property="og:url" content="https://webcraftinnov26-del.github.io/WebCraft/">
+<meta property="og:image" content="https://webcraftinnov26-del.github.io/WebCraft/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="theme-color" content="#131217">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0b'/%3E%3Ctext x='50' y='72' font-family='Arial Black,sans-serif' font-size='62' font-weight='900' fill='%23E0324A' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "WebCraft Innovations",
+  "description": "Création de sites web modernes et premium pour commerces et entrepreneurs.",
+  "telephone": "+1-514-290-6183",
+  "email": "webcraftinnov26@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Laval", "addressRegion": "QC", "addressCountry": "CA" },
+  "priceRange": "140$–230$",
+  "sameAs": ["https://www.instagram.com/webcraft.inv"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Space+Mono:wght@400;700&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:      #E0324A;
+    --red-dark: #9b1a2a;
+    --red-glow: rgba(224,50,74,.5);
+    --ink:      #131217;
+    --surface:  #18181e;
+    --card: #202028; --card2: #282833;
+    --surface2: #1e1e25;
+    --text:     #f4f2f2;
+    --muted:    #8b8791;
+    --line:     #2f2d37;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--ink);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .anton { font-family: 'Anton', sans-serif; font-weight: 400; letter-spacing: .5px; }
+  .mono  { font-family: 'Space Mono', monospace; }
+  .red { color: var(--red); }
+
+  /* ═══════ Barre de progression ═══════ */
+  .progress {
+    position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--red-dark), var(--red));
+    z-index: 500; box-shadow: 0 0 10px var(--red-glow);
+  }
+
+  /* ═══════ NAV ═══════ */
+  nav {
+    position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 200;
+    display: flex; align-items: center; justify-content: space-between;
+    width: calc(100% - 40px); max-width: 1280px;
+    padding: 14px 24px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--ink) 78%, transparent);
+    backdrop-filter: blur(18px);
+    transition: padding .4s, box-shadow .4s, top .4s, background .4s;
+  }
+  nav.shrink {
+    padding: 9px 24px; top: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.4);
+    background: color-mix(in srgb, var(--ink) 88%, transparent);
+  }
+  .brand { display: flex; flex-direction: column; line-height: 1; cursor: pointer; user-select: none; }
+  .brand .main { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.7rem; letter-spacing: 1px; transition: font-size .4s; }
+  nav.shrink .brand .main { font-size: 1.42rem; }
+  .brand .main .red { color: var(--red); }
+  .brand .sub { font-family: 'Space Mono', monospace; font-size: .52rem; letter-spacing: 5px; color: var(--muted); text-align: right; margin-top: 3px; }
+  .nav-right { display: flex; align-items: center; gap: 26px; }
+  .nav-links { display: flex; gap: 26px; }
+  .nav-links a {
+    font-size: .78rem; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; position: relative; transition: color .3s;
+  }
+  .nav-links a::after { content:""; position:absolute; left:0; bottom:-5px; width:0; height:1px; background: var(--red); transition: width .3s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-tools { display: flex; align-items: center; gap: 12px; }
+  .icon-btn {
+    width: 38px; height: 38px; border: 1px solid var(--line); background: none; border-radius: 10px;
+    color: var(--text); cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: border-color .3s, background .3s, transform .2s; font-family: 'Space Mono', monospace; font-size: .72rem; font-weight: 700;
+  }
+  .icon-btn:hover { border-color: var(--red); background: color-mix(in srgb, var(--red) 12%, transparent); }
+  .icon-btn:active { transform: scale(.9); }
+  .icon-btn svg { width: 18px; height: 18px; }
+  .burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+  .burger span { width: 24px; height: 2px; background: var(--text); transition: .3s; }
+
+  /* ═══════ HERO 3D ═══════ */
+  .hero { position: relative; height: min(92svh, 860px); min-height: 560px; overflow: hidden; z-index: 1; }
+  #heroGL { position: absolute; inset: 0; z-index: 1; }
+  @media (max-width: 768px) {
+    .hero { height: 100svh; height: 100dvh; min-height: 480px; }
+    .hero .scroll-cue { bottom: 14px; font-size: .6rem; }
+    .hero-overlay { padding: 0 20px; }
+    .hero-kicker { font-size: clamp(1.4rem, 5vw, 2.2rem) !important; }
+    .hero-sub { font-size: clamp(.88rem, 2.8vw, 1rem) !important; margin-bottom: 12px !important; }
+    .hero-cta-row { gap: 10px !important; }
+    .hero-cta-row .btn { padding: 14px 22px !important; font-size: .88rem !important; }
+  }
+  .hero-overlay {
+    position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column;
+    justify-content: center; padding: 0 40px; max-width: 1300px; margin: 0 auto; left: 0; right: 0;
+    pointer-events: none;
+  }
+  .hero-kicker {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2rem, 5.6vw, 4rem);
+    line-height: .95;
+    letter-spacing: .5px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 18px; pointer-events: auto;
+    opacity: 0; transform: translateY(30px) skewX(-3deg); animation: heroIn .8s .15s forwards;
+    text-shadow: 0 6px 40px rgba(224,50,74,.35);
+  }
+  .hero h1 {
+    font-family: 'Anton', sans-serif; font-weight: 400;
+    font-size: clamp(1.35rem, 3vw, 2.4rem); line-height: 1.08; letter-spacing: .5px;
+    max-width: 22ch; margin-bottom: 26px; color: var(--text);
+  }
+  .hero h1 .line { display: block; overflow: hidden; }
+  .hero h1 .line span { display: inline-block; transform: translateY(110%); animation: lineUp .9s cubic-bezier(.2,.8,.2,1) forwards; }
+  .hero h1 .line:nth-child(1) span { animation-delay: .25s; }
+  .hero h1 .line:nth-child(2) span { animation-delay: .38s; }
+  .hero h1 .line:nth-child(3) span { animation-delay: .51s; }
+  @keyframes lineUp { to { transform: none; } }
+  @keyframes heroIn { to { opacity: 1; transform: none; } }
+  .hero-sub {
+    font-size: 1.2rem; color: var(--muted); max-width: 44ch; margin-bottom: 38px; pointer-events: auto;
+    opacity: 0; transform: translateY(20px); animation: heroIn .8s .7s forwards;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; pointer-events: auto; opacity: 0; transform: translateY(20px); animation: heroIn .8s .85s forwards; }
+
+  .btn {
+    font-family: 'Barlow', sans-serif; font-weight: 600; font-size: .82rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 16px 38px; border-radius: 40px; text-decoration: none; cursor: pointer; border: 1px solid transparent;
+    position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px;
+    transition: transform .3s, box-shadow .3s, background .3s, color .3s, border-color .3s;
+  }
+  .btn .arrow { transition: transform .3s; }
+  .btn:hover .arrow { transform: translateX(6px); }
+  .btn::after { content:""; position:absolute; top:0; left:-80%; width:50%; height:100%;
+    background: linear-gradient(105deg, transparent, rgba(255,255,255,.35), transparent); transform: skewX(-20deg); transition: left .6s; }
+  .btn:hover::after { left: 140%; }
+  .btn-primary { background: var(--red); color: #fff; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px var(--red-glow); }
+  .btn-ghost { border-color: var(--line); color: var(--text); }
+  .btn-ghost:hover { border-color: var(--red); color: var(--red); }
+
+  .scroll-cue {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 3;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    font-family: 'Space Mono', monospace; font-size: .6rem; letter-spacing: 3px; color: var(--muted);
+  }
+  .scroll-cue .bar { width: 1px; height: 44px; background: linear-gradient(var(--red), transparent); animation: cue 2s infinite; transform-origin: top; }
+  @keyframes cue { 0%,100% { transform: scaleY(.3); opacity:.3; } 50% { transform: scaleY(1); opacity:1; } }
+
+  /* ═══════ Sections ═══════ */
+  section { position: relative; scroll-margin-top: 64px; }
+  .wrap { max-width: 1300px; margin: 0 auto; padding: 60px 40px; }
+  .head { max-width: 760px; margin-bottom: 44px; }
+  .head .kicker { font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--red); display: inline-block; padding: 5px 14px; border: 1px solid color-mix(in srgb, var(--red) 40%, transparent); border-radius: 30px; }
+  .head h2 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(2.1rem, 4.6vw, 3.4rem); margin: 16px 0 12px; line-height: 1; letter-spacing: .5px; text-transform: uppercase; }
+  .head p { color: #cfccd4; font-size: 1.22rem; }
+  .hl { background: linear-gradient(transparent 58%, rgba(224,50,74,.45) 58%); padding: 0 .1em; }
+  .hl-gold { background: linear-gradient(transparent 58%, rgba(201,162,39,.5) 58%); padding: 0 .1em; }
+
+  /* reveal */
+  .rv { opacity: 0; transform: translateY(46px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+  .rv.in { opacity: 1; transform: none; }
+  .rv.d1 { transition-delay: .1s; } .rv.d2 { transition-delay: .2s; } .rv.d3 { transition-delay: .3s; }
+
+  /* ═══════ Bande défilante (marquee) ═══════ */
+  .marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; overflow: hidden; background: var(--surface); }
+  .marquee-track { display: flex; gap: 60px; white-space: nowrap; width: max-content; animation: scrollX 26s linear infinite; }
+  .marquee-track span { font-family: 'Anton', sans-serif; font-size: 1.7rem; color: var(--muted); letter-spacing: 1px; display: inline-flex; align-items: center; gap: 60px; }
+  .marquee-track span::after { content: "◆"; color: var(--red); font-size: .9rem; }
+  @keyframes scrollX { to { transform: translateX(-50%); } }
+
+  /* ═══════ Services (cartes 3D tilt) ═══════ */
+  .services { background: radial-gradient(800px 400px at 15% 20%, rgba(224,50,74,.06), transparent 60%), var(--ink); }
+  .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .svc {
+    position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 38px 32px; overflow: hidden; transform-style: preserve-3d; transition: transform .2s ease-out, border-color .4s;
+  }
+  .svc::before { content:""; position:absolute; top: var(--my,50%); left: var(--mx,50%); width: 300px; height: 300px;
+    background: radial-gradient(circle, var(--red-glow), transparent 60%); opacity: 0; transform: translate(-50%,-50%); transition: opacity .4s; pointer-events: none; }
+  .svc:hover { border-color: color-mix(in srgb, var(--red) 55%, transparent); }
+  .svc:hover::before { opacity: .5; }
+  .svc-inner { transform: translateZ(40px); }
+  .svc-icon { width: 46px; height: 46px; margin-bottom: 18px; }
+  .svc .num { font-family: 'Space Mono', monospace; font-size: .74rem; color: var(--red); letter-spacing: 2px; }
+  .svc h3 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 2rem; margin: 12px 0; text-transform: uppercase; letter-spacing: .5px; line-height: 1; }
+  .svc p { color: var(--muted); font-size: .98rem; }
+
+  /* ═══════ Process (timeline défilé) ═══════ */
+  .process { background: var(--surface); position: relative; }
+  #processGL { position: absolute; inset: 0; z-index: 0; opacity: .55; pointer-events: none; }
+  .process::after { content:""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 30%, var(--surface) 88%); }
+  .timeline { position: relative; max-width: 780px; margin: 0 auto; }
+  .timeline::before { content:""; position: absolute; left: 27px; top: 0; bottom: 0; width: 2px; background: var(--line); }
+  .tstep { position: relative; padding: 0 0 46px 82px; }
+  .tstep:last-child { padding-bottom: 0; }
+  .tstep .dot {
+    position: absolute; left: 14px; top: 0; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--ink); border: 2px solid var(--red); display: flex; align-items: center; justify-content: center;
+    font-family: 'Space Mono', monospace; font-size: .7rem; color: var(--red); z-index: 1;
+  }
+  .tstep h3 { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.4rem; text-transform: uppercase; margin-bottom: 8px; }
+  .tstep p { color: var(--muted); }
+
+  /* ═══════ Pourquoi (gros chiffres) ═══════ */
+  .why { background: var(--ink); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+  .why-card { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--red); padding: 34px 28px; transition: transform .3s, box-shadow .3s; }
+  .why-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.4); }
+  .why-big { font-family: 'Anton', sans-serif; font-size: 3rem; color: var(--red); line-height: 1; }
+  .why-label { font-family: 'Space Mono', monospace; font-size: .78rem; letter-spacing: 2px; text-transform: uppercase; margin: 8px 0 12px; }
+  .why-card p { color: var(--muted); font-size: .95rem; }
+
+  /* ═══════ Forfaits ═══════ */
+  .pricing { background: var(--surface); }
+  #pricingGL { position: absolute; inset: 0; z-index: 0; opacity: .85; pointer-events: none; }
+  .pricing .wrap { position: relative; z-index: 1; }
+  .price-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+  .price-card {
+    position: relative; background: color-mix(in srgb, var(--card) 93%, transparent); border: 1px solid var(--line); border-radius: 20px; padding: 30px 28px;
+    overflow: hidden; transition: transform .4s, border-color .4s, box-shadow .4s; backdrop-filter: blur(4px);
+  }
+  .price-card:hover { transform: translateY(-8px); border-color: var(--red); box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+  .price-card.premium { border-color: rgba(201,162,39,.5); background: linear-gradient(160deg, #14100a, #0d0b07); }
+  .price-card.premium:hover { border-color: #c9a227; box-shadow: 0 20px 50px rgba(201,162,39,.2); }
+  .price-badge { position: absolute; top: 0; right: 0; background: #c9a227; color: #0a0a0a; font-family: 'Space Mono', monospace; font-size: .68rem; font-weight: 700; letter-spacing: 2px; padding: 6px 16px; border-bottom-left-radius: 12px; }
+  .price-name { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.3rem; text-transform: uppercase; }
+  .price-tag { font-family: 'Anton', sans-serif; font-size: 2.6rem; color: var(--red); margin: 14px 0 6px; line-height: 1; }
+  .price-card.premium .price-tag { color: #c9a227; }
+  .price-note { font-family: 'Space Mono', monospace; font-size: .7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+  .price-list { list-style: none; margin-bottom: 30px; }
+  .price-list li { padding: 7px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .9rem; display: flex; gap: 10px; align-items: flex-start; }
+  .price-list li::before { content: "✓"; color: var(--red); font-weight: 700; }
+  .price-card.premium .price-list li::before { color: #c9a227; }
+  .price-card .btn { width: 100%; justify-content: center; }
+  .price-card.premium .btn-primary { background: #c9a227; color: #0a0a0a; }
+  .price-card.premium .btn-primary:hover { box-shadow: 0 14px 40px rgba(201,162,39,.4); }
+  .feat-3d { color: #c9a227 !important; font-weight: 700 !important; }
+  .feat-3d::before { content: "◆" !important; color: #c9a227 !important; }
+  /* Aperçu 3D dans la carte premium */
+  .price-3d-preview {
+    position: relative; height: 120px; margin: 0 0 20px; border-radius: 12px; overflow: hidden;
+    border: 1px solid rgba(201,162,39,.3); background: radial-gradient(ellipse at 60% 40%, #1a1408, #0a0806);
+  }
+  .price-3d-preview canvas { display: block; width: 100%; height: 100%; }
+  .price-3d-preview .p3d-label {
+    position: absolute; bottom: 8px; left: 12px; font-family: 'Space Mono', monospace; font-size: .62rem;
+    letter-spacing: 2px; color: #c9a227; text-transform: uppercase; z-index: 2;
+  }
+
+  /* ═══════ CTA final ═══════ */
+  .final { position: relative; overflow: hidden; text-align: center; padding: 72px 40px;
+    background: radial-gradient(ellipse at center, rgba(224,50,74,.16), transparent 65%), var(--ink); }
+  .final .echo { position: absolute; top:50%; left:50%; transform: translate(-50%,-50%); font-family:'Oswald',sans-serif; font-weight:700;
+    font-size: clamp(200px, 42vw, 460px); color: rgba(224,50,74,.05); line-height:1; pointer-events:none; user-select:none; }
+  .final .echo-3d { position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: .28; }
+  .final-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+  .final-big { font-size: clamp(1.5rem, 3.4vw, 2.3rem) !important; line-height: 1.4; font-weight: 500; color: var(--text) !important; max-width: 100%; }
+  .final h2 { font-family:'Anton',sans-serif; font-weight: 400; font-size: clamp(2.2rem,6vw,3.6rem); line-height: 1.08; margin-bottom: 20px; }
+  .final p { color: var(--muted); font-size: 1.15rem; margin-bottom: 34px; }
+  .final-reassure { display: flex; gap: 26px; justify-content: center; flex-wrap: wrap; margin-top: 30px; font-family:'Space Mono',monospace; font-size:.82rem; color: var(--muted); }
+
+  /* ═══════ Footer ═══════ */
+  footer { background: #000; border-top: 1px solid var(--line); padding: 60px 40px 36px; }
+  .foot-inner { max-width: 1300px; margin: 0 auto; }
+  .foot-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 46px; }
+  @media (min-width: 620px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  .foot-box { display: flex; align-items: center; gap: 16px; background: var(--red); color: #fff; text-decoration: none;
+    padding: 22px 26px; border-radius: 10px; font-family:'Oswald',sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;
+    transition: transform .18s, box-shadow .25s, background .25s; overflow: hidden; position: relative; }
+  .foot-box:hover { transform: translateY(-3px); box-shadow: 0 10px 28px var(--red-glow); background: var(--red-dark); }
+  .foot-box svg { width: 28px; height: 28px; flex-shrink: 0; }
+  .foot-bottom { text-align: center; color: var(--muted); }
+  .foot-bottom .brand { display: inline-flex; margin-bottom: 12px; }
+  .foot-bottom .brand .main { font-size: 1.5rem; }
+  .foot-socials { display: flex; gap: 16px; justify-content: center; margin: 14px 0; }
+  .foot-socials a { color: var(--muted); font-family:'Space Mono',monospace; font-size:.72rem; letter-spacing:1px; text-decoration: none; transition: color .3s; }
+  .foot-socials a:hover { color: var(--red); }
+
+  /* ═══════ Page Contact ═══════ */
+  /* ═══════ Section confiance ═══════ */
+  .assure { background: var(--ink); }
+  .assure-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 940px) { .assure-grid { grid-template-columns: 1fr; } }
+  .claim { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 38px 32px; transition: transform .35s, border-color .35s; }
+  .claim:hover { transform: translateY(-6px); border-color: var(--red); }
+  .claim-tag { font-family: 'Space Mono', monospace; font-size: .72rem; letter-spacing: 3px; color: var(--red); }
+  .claim h3 { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.75rem; line-height: 1.16; margin: 16px 0 14px; text-transform: uppercase; }
+  .claim p { color: #c9c6cf; font-size: 1.07rem; }
+  .claim em { font-family: 'Barlow', sans-serif; font-style: italic; color: var(--text); }
+  .assure-cta { display: flex; gap: 14px; justify-content: center; margin-top: 46px; flex-wrap: wrap; }
+
+  /* ═══════ Page Forfaits (overlay) ═══════ */
+  .forfaits-page { position: fixed; inset: 0; z-index: 340; background: var(--ink); display: none; overflow-y: auto; }
+  .forfaits-page.open { display: block; animation: fadeIn .4s; }
+  .forfaits-page .wrap { padding-top: 54px; padding-bottom: 40px; }
+  .fp-back { position: fixed; top: 22px; left: 22px; z-index: 360; width: 48px; height: 44px; border: 1px solid var(--line);
+    background: color-mix(in srgb, var(--ink) 70%, transparent); border-radius: 10px; color: var(--text); font-size: 1.4rem;
+    cursor: pointer; transition: border-color .3s, color .3s; display: none; }
+  .forfaits-page.open ~ nav .fp-back, .fp-back.show { display: block; }
+  .fp-back:hover { border-color: var(--red); color: var(--red); }
+
+  /* ═══════ Page Identité (overlay) ═══════ */
+  .identite-page { position: fixed; inset: 0; z-index: 345; background: var(--ink); display: none; overflow-y: auto; }
+  .identite-page.open { display: block; animation: fadeIn .4s; }
+  .identite-page .wrap { padding-top: 68px; padding-bottom: 60px; }
+  .id-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 46px; align-items: center; }
+  @media (max-width: 940px) { .id-grid { grid-template-columns: 1fr; } }
+  .id-text h3 { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.28rem; text-transform: uppercase; letter-spacing: .5px; color: var(--red); margin: 26px 0 8px; }
+  .id-text h3:first-child { margin-top: 0; }
+  .id-text h3.gold { color: #c9a227; }
+  .id-text p { color: #c9c6cf; font-size: 1.02rem; margin: 0; }
+  .id-text p em { font-style: italic; color: var(--text); }
+  .id-slogan { text-align: center; margin-top: 52px; font-family: 'Anton', sans-serif; font-size: clamp(1.5rem, 4vw, 2.6rem); letter-spacing: 2px; text-transform: uppercase; }
+  .id-slogan span { color: var(--red); padding: 0 14px; }
+  .id-cta { display: flex; gap: 14px; justify-content: center; margin-top: 34px; flex-wrap: wrap; }
+
+  /* Mockup laptop : le site WebCraft à l'écran */
+  .laptop { max-width: 470px; margin: 0 auto; filter: drop-shadow(0 30px 60px rgba(224,50,74,.18)); }
+  .laptop-screen { background: #050506; border: 2px solid #2a2830; border-bottom: none; border-radius: 14px 14px 0 0; padding: 10px 10px 0; }
+  .ls-inner { background: var(--ink); border-radius: 8px 8px 0 0; overflow: hidden; aspect-ratio: 16/10; display: flex; flex-direction: column; border: 1px solid var(--line); border-bottom: none; }
+  .ls-nav { display: flex; justify-content: space-between; align-items: center; padding: 9px 14px; border-bottom: 1px solid var(--line); }
+  .ls-logo { font-family: 'Anton', sans-serif; font-size: .68rem; letter-spacing: 1px; }
+  .ls-logo .r { color: var(--red); }
+  .ls-links { display: flex; gap: 7px; }
+  .ls-links i { width: 20px; height: 3px; border-radius: 2px; background: #3a3742; }
+  .ls-hero { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 18px; position: relative; overflow: hidden; }
+  .ls-kicker { font-family: 'Anton', sans-serif; font-size: .92rem; color: var(--red); text-transform: uppercase; letter-spacing: .5px; }
+  .ls-title { font-family: 'Anton', sans-serif; font-size: .6rem; letter-spacing: .4px; color: var(--text); margin-top: 5px; text-transform: uppercase; opacity: .9; }
+  .ls-btns { display: flex; gap: 8px; margin-top: 10px; }
+  .ls-btn { width: 52px; height: 12px; border-radius: 3px; }
+  .ls-btn.red { background: var(--red); box-shadow: 0 0 14px rgba(224,50,74,.5); }
+  .ls-btn.ghost { border: 1px solid #3a3742; }
+  .ls-cubes { position: absolute; right: 12px; bottom: 10px; display: flex; gap: 7px; align-items: flex-end; }
+  .ls-cubes i { width: 11px; background: var(--red); border-radius: 2px; animation: lsCube 2.6s ease-in-out infinite; box-shadow: 0 0 10px rgba(224,50,74,.55); }
+  .ls-cubes i:nth-child(1){height:12px;animation-delay:0s;} .ls-cubes i:nth-child(2){height:20px;animation-delay:.2s;}
+  .ls-cubes i:nth-child(3){height:15px;animation-delay:.4s;} .ls-cubes i:nth-child(4){height:24px;animation-delay:.6s;}
+  .ls-cubes i:nth-child(5){height:17px;animation-delay:.8s;}
+  @keyframes lsCube { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+  .laptop-base { height: 13px; background: linear-gradient(#38353f, #201e26); border-radius: 0 0 16px 16px; position: relative; }
+  .laptop-base::before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 84px; height: 5px; background: #141317; border-radius: 0 0 8px 8px; }
+  @media (prefers-reduced-motion: reduce) { .ls-cubes i { animation: none; } }
+
+
+  /* ═══════ Vue Commande (overlay) ═══════ */
+  .commande-page { position: fixed; inset: 0; z-index: 350; background: var(--ink); display: none; overflow-y: auto;
+    --accent: #E0324A; --accent-glow: rgba(224,50,74,.5); --accent-soft: rgba(224,50,74,.15); }
+  .commande-page.open { display: block; animation: fadeIn .4s; }
+  .commande-page.theme-premium { --accent: #c9a227; --accent-glow: rgba(201,162,39,.55); --accent-soft: rgba(201,162,39,.16); }
+  .cwrap { width: min(1080px, 92%); margin: 0 auto; padding: 66px 0 70px; }
+  .commande-page .steps { font-family: 'Space Mono', monospace; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .commande-page .steps .on { color: var(--accent); }
+  .commande-page .steps .done { color: #35c26e; }
+  .commande-page .steps .sep { width: 24px; height: 1px; background: var(--line); }
+  .commande-page h1 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.7rem); margin: 0 0 10px; letter-spacing: .5px; }
+  .commande-page h1 .accent { color: var(--accent); }
+  .commande-page .lede { color: var(--muted); max-width: 58ch; margin: 0 0 34px; }
+  .ch-price-line { font-family: 'Space Mono', monospace; font-size: 1rem; color: var(--accent); }
+  .cgrid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 30px; align-items: start; }
+  @media (max-width: 880px) { .cgrid { grid-template-columns: 1fr; } }
+  .pack-card { position: relative; background: linear-gradient(165deg, var(--card2), var(--card));
+    border: 1px solid var(--line); border-radius: 18px; padding: 30px 28px; overflow: hidden; }
+  .pack-card.chosen { border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+    box-shadow: 0 18px 60px var(--accent-soft), 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent); }
+  .pack-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+    background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 55%, #000)); }
+  .pack-ribbon { position: absolute; top: 16px; right: -34px; transform: rotate(38deg);
+    background: var(--accent); color: #0d0c0e; font-family: 'Space Mono', monospace;
+    font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    padding: 6px 42px; box-shadow: 0 6px 18px var(--accent-glow); z-index: 2; }
+  #packFx { position: absolute; inset: 0; z-index: 0; opacity: .3; pointer-events: none; }
+  .pack-inner { position: relative; z-index: 1; }
+  .pack-eyebrow { font-family: 'Space Mono', monospace; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .pack-name { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 1.9rem; letter-spacing: .5px; margin: 0 0 4px; }
+  .pack-price { font-family: 'Space Mono', monospace; font-size: 1.1rem; margin-bottom: 18px; }
+  .pack-price small { color: var(--muted); font-size: .76rem; }
+  .pack-badge { display: inline-block; font-family: 'Space Mono', monospace; font-size: .64rem; letter-spacing: .14em;
+    text-transform: uppercase; color: #c9a227; border: 1px solid rgba(201,162,39,.45); border-radius: 100px; padding: 5px 12px; margin-bottom: 16px; }
+  .pack-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
+  .pack-list li { display: flex; gap: 10px; align-items: flex-start; font-size: .92rem; color: #cfccd4; }
+  .pack-list li::before { content: "✓"; color: var(--accent); font-weight: 700; flex: none; }
+  .pack-note { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .82rem; color: var(--muted); }
+  .pack-switch { margin-top: 12px; font-size: .84rem; }
+  .pack-switch button { background: none; border: none; padding: 0; color: var(--accent); cursor: pointer; font: inherit; }
+  .pack-switch button:hover { text-decoration: underline; }
+  .cselector { display: grid; gap: 12px; }
+  .cselector button { text-align: left; background: var(--card2); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px 20px; color: var(--text); cursor: pointer; font-family: inherit; font-size: 1rem; transition: border-color .25s, transform .25s; }
+  .cselector button:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .cselector .s-name { font-family: 'Anton', sans-serif; font-size: 1.2rem; letter-spacing: .5px; }
+  .cselector .s-price { font-family: 'Space Mono', monospace; color: var(--muted); font-size: .84rem; margin-top: 3px; }
+  .form-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 30px 28px; }
+  .form-card h2 { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.25rem; text-transform: uppercase; letter-spacing: .5px; margin: 0 0 4px; }
+  .form-sub { color: var(--muted); font-size: .9rem; margin: 0 0 24px; }
+  .commande-page .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .commande-page .row2 { grid-template-columns: 1fr; } }
+  .commande-page .field { margin-bottom: 17px; }
+  .commande-page label { display: block; font-family: 'Space Mono', monospace; font-size: .7rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+  .commande-page label .req { color: var(--accent); }
+  .commande-page label .opt { color: var(--muted); text-transform: none; letter-spacing: 0; font-size: .68rem; opacity: .85; }
+  .commande-page input, .commande-page textarea { width: 100%; background: var(--card2); border: 1px solid var(--line);
+    border-radius: 10px; color: var(--text); font-family: 'Barlow', sans-serif; font-size: 1rem; padding: 13px 15px;
+    transition: border-color .25s, box-shadow .25s; }
+  .commande-page input:focus, .commande-page textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .commande-page textarea { min-height: 110px; resize: vertical; }
+  .commande-page .err { display: none; color: #ff7285; font-size: .8rem; margin-top: 6px; }
+  .commande-page .field.invalid input, .commande-page .field.invalid textarea { border-color: var(--accent); }
+  .commande-page .field.invalid .err { display: block; }
+  .submit-btn { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background: var(--accent); color: #fff; border: none; border-radius: 12px; cursor: pointer;
+    font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 1.02rem; padding: 16px 26px; margin-top: 4px;
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s; }
+  .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 34px var(--accent-glow); }
+  .submit-btn:disabled { opacity: .6; cursor: wait; transform: none; box-shadow: none; }
+  .commande-page.theme-premium .submit-btn { color: #151310; }
+  .form-foot { text-align: center; color: var(--muted); font-size: .78rem; margin-top: 14px; }
+
+  /* ═══════ Vue Merci (overlay) ═══════ */
+  .merci-page { position: fixed; inset: 0; z-index: 355; background: var(--ink); display: none; overflow-y: auto; }
+  .merci-page.open { display: flex; align-items: center; justify-content: center; padding: 60px 5vw; animation: fadeIn .4s; }
+  .mcard { background: linear-gradient(170deg, var(--card2), var(--card)); border: 1px solid var(--line);
+    border-radius: 22px; padding: 50px 42px; max-width: 540px; width: 100%; text-align: center; }
+  .mcheck { width: 96px; height: 96px; margin: 0 auto 26px; display: block; }
+  .mcheck .circle { fill: none; stroke: #35c26e; stroke-width: 5; stroke-linecap: round;
+    stroke-dasharray: 320; stroke-dashoffset: 320; animation: mdraw .9s cubic-bezier(.2,.8,.2,1) .2s forwards;
+    filter: drop-shadow(0 0 14px rgba(53,194,110,.45)); }
+  .mcheck .tick { fill: none; stroke: #35c26e; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round;
+    stroke-dasharray: 80; stroke-dashoffset: 80; animation: mdraw .55s cubic-bezier(.2,.8,.2,1) .95s forwards; }
+  @keyframes mdraw { to { stroke-dashoffset: 0; } }
+  .msent { font-family: 'Space Mono', monospace; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: #35c26e; margin-bottom: 12px; }
+  .mcard h2 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(1.8rem, 5vw, 2.5rem); margin: 0 0 12px; letter-spacing: .5px; }
+  .mmsg { color: var(--muted); font-size: 1.02rem; max-width: 40ch; margin: 0 auto 6px; }
+  .mmsg strong { color: var(--text); }
+  .msub { color: var(--muted); font-size: .86rem; margin: 0 auto 30px; }
+  @media (prefers-reduced-motion: reduce) { .mcheck .circle, .mcheck .tick { animation: none; stroke-dashoffset: 0; } }
+
+  /* ═══════ Vue Confidentialité ═══════ */
+  .legal-page { position: fixed; inset: 0; z-index: 360; background: var(--ink); display: none; overflow-y: auto; }
+  .legal-page.open { display: block; animation: fadeIn .4s; }
+  .lwrap { max-width: 800px; margin: 0 auto; padding: 64px 22px 80px; }
+  .lwrap h2 { font-family: 'Anton', sans-serif; font-weight: 400; font-size: clamp(1.9rem, 4.5vw, 2.8rem); letter-spacing: .5px; text-transform: uppercase; margin: 0 0 8px; }
+  .lwrap .ldate { font-family: 'Space Mono', monospace; font-size: .74rem; color: var(--muted); margin-bottom: 30px; }
+  .lwrap h3 { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.15rem; text-transform: uppercase; letter-spacing: .5px; color: var(--red); margin: 26px 0 8px; }
+  .lwrap p { color: #c9c6cf; font-size: .98rem; margin: 0 0 10px; }
+  .lwrap a { color: var(--red); }
+
+  .contact-page {
+    position: fixed; inset: 0; z-index: 350;
+    background: radial-gradient(ellipse at 70% 20%, rgba(224,50,74,.14), transparent 60%), var(--ink);
+    display: none; overflow-y: auto;
+  }
+  .contact-page.open { display: block; animation: fadeIn .4s; }
+  .contact-gl { position: absolute; inset: 0; z-index: 0; opacity: .5; pointer-events: none; }
+  .contact-back {
+    position: absolute; top: 26px; left: 26px; z-index: 3;
+    width: 48px; height: 44px; border: 1px solid var(--line); background: color-mix(in srgb, var(--ink) 70%, transparent);
+    border-radius: 10px; color: var(--text); font-size: 1.4rem; cursor: pointer; transition: border-color .3s, color .3s, background .3s;
+  }
+  .contact-back:hover { border-color: var(--red); color: var(--red); }
+  .contact-inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; padding: 72px 30px 50px; text-align: center; }
+  .contact-kicker { font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 4px; text-transform: uppercase; color: var(--red);
+    display: inline-block; padding: 5px 16px; border: 1px solid color-mix(in srgb, var(--red) 40%, transparent); border-radius: 30px; }
+  .contact-title { font-size: clamp(2rem, 5vw, 3.4rem); line-height: .98; margin: 20px 0 16px; text-transform: uppercase; }
+  .contact-sub { color: var(--muted); font-size: 1.15rem; max-width: 46ch; margin: 0 auto 50px; }
+  .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-bottom: 44px; }
+  .contact-card {
+    position: relative; overflow: hidden; text-decoration: none; text-align: left;
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 32px 28px;
+    color: var(--text); transition: transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s, box-shadow .4s;
+  }
+  .contact-card .cc-glow { position: absolute; top: -30%; right: -20%; width: 200px; height: 200px;
+    background: radial-gradient(circle, var(--red-glow), transparent 65%); opacity: 0; transition: opacity .4s; }
+  .contact-card:hover { transform: translateY(-8px); border-color: var(--red); box-shadow: 0 22px 50px rgba(224,50,74,.2); }
+  .contact-card:hover .cc-glow { opacity: 1; }
+  .cc-icon { width: 42px; height: 42px; color: var(--red); margin-bottom: 18px; }
+  .cc-label { font-family: 'Space Mono', monospace; font-size: .72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .cc-value { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.15rem; word-break: break-word; margin-bottom: 18px; }
+  .cc-action { font-family: 'Space Mono', monospace; font-size: .8rem; color: var(--red); letter-spacing: 1px; }
+  .contact-foot { font-family: 'Space Mono', monospace; font-size: .82rem; letter-spacing: 2px; color: var(--muted); }
+
+
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  .hero, .services, .why, .pricing, .process, .final { overflow: hidden; position: relative; }
+
+  /* ═══════ Responsive ═══════ */
+  @media (max-width: 860px) {
+    nav { padding: 14px 18px; } nav.shrink { padding: 10px 18px; }
+    .nav-links { position: fixed; inset: 0 0 0 auto; width: 78%; max-width: 330px; background: var(--surface);
+      flex-direction: column; justify-content: center; padding: 60px 40px; gap: 28px; transform: translateX(100%);
+      transition: transform .45s cubic-bezier(.5,0,.2,1); box-shadow: -20px 0 60px rgba(0,0,0,.5); }
+    .nav-links.open { transform: translateX(0); }
+    .nav-links a { font-size: 1rem; }
+    .burger { display: flex; z-index: 201; }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .wrap { padding: 64px 22px; }
+    .price-grid { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    .rv { opacity: 1; transform: none; }
+  }
+  :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<a href="#accueil" style="position:absolute; left:-9999px; top:0; background:var(--red); color:#fff; padding:12px 20px; z-index:999; font-weight:600;" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Aller au contenu</a>
+
+<div class="progress" id="progress"></div>
+
+<!-- ═══════ NAV ═══════ -->
+<nav id="nav">
+  <div class="brand" onclick="location.href='#accueil'">
+    <span class="main"><span class="red">W</span>EB<span class="red">C</span>RAFT</span>
+    <span class="sub">INNOVATIONS</span>
+  </div>
+  <div class="nav-right">
+    <div class="nav-links" id="navLinks">
+      <a href="#accueil">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#" onclick="openIdentitePage(); return false;">Identité</a>
+      <a href="#" onclick="openForfaitsPage(); return false;">Forfaits</a>
+      <a href="#" onclick="openContactPage(); return false;">Contact</a>
+    </div>
+    <div class="nav-tools">
+      <button class="icon-btn" id="langBtn" aria-label="Langue">ENG</button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<header class="hero" id="accueil">
+  <canvas id="heroGL"></canvas>
+  <div class="hero-overlay">
+    <div class="hero-kicker anton">Création de sites<br>sur mesure</div>
+    <h1 class="anton">
+      <span class="line"><span>Des sites conçus</span></span>
+      <span class="line"><span>pour <span class="red">votre commerce</span>,</span></span>
+      <span class="line"><span>livrés vite et bien faits.</span></span>
+    </h1>
+    <p class="hero-sub"><span class="red">W</span>eb<span class="red">C</span>raft vous crée un site qui reflète vos idées et vos concepts — rapide, propre, et pensé pour attirer de vrais clients.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn btn-primary" onclick="openIdentitePage(); return false;">Notre identité <span class="arrow">→</span></a>
+      <a href="#" class="btn btn-ghost" onclick="openForfaitsPage(); return false;">Voir les forfaits</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>DÉFILER</span><span class="bar"></span></div>
+</header>
+
+<!-- ═══════ SERVICES ═══════ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kicker">Nos services</div>
+      <h2>Des solutions web<br>pour votre commerce</h2>
+      <p>Restauration, coiffure, vente, artisanat, produits uniques, marques de vêtements, salons de beauté — peu importe votre domaine, <span class="red">W</span>eb<span class="red">C</span>raft construit le site qui vous ressemble. Notre idée est simple : un commerce qui n'est pas visible en ligne aujourd'hui, c'est un commerce qui laisse partir des clients vers la concurrence. On crée des sites qui montrent votre commerce sous son meilleur jour, qui donnent confiance dès le premier coup d'œil, et qui transforment les visiteurs en vrais clients. Chaque site est pensé pour votre réalité : vos produits, vos couleurs, votre ambiance, votre clientèle. Pas de modèle générique recopié d'un commerce à l'autre — on part de qui vous êtes pour construire quelque chose d'unique. Notre but n'est pas juste de vous faire « un site » : c'est de vous donner un outil qui travaille pour vous, qui vous rapporte des appels, des réservations et des ventes, même quand vous dormez. Un site rapide, moderne, qui fonctionne aussi bien sur téléphone que sur ordinateur, et qui met votre commerce à la hauteur des plus grands.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc tilt rv">
+        <div class="svc-inner">
+          <svg class="svc-icon" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="24" rx="3" fill="none" stroke="#E0324A" stroke-width="2.2"/><path d="M6 27h36" stroke="#E0324A" stroke-width="1.4" opacity=".5"/><rect x="18" y="35" width="12" height="4" rx="1" fill="#E0324A" opacity=".7"/><rect x="14" y="39" width="20" height="2.4" rx="1.2" fill="#E0324A"/></svg>
+          <div class="num">01</div><h3>Site vitrine</h3>
+          <p>Une présence en ligne claire et professionnelle pour présenter votre activité, vos produits et vos coordonnées. C'est la carte de visite moderne de votre commerce : dès qu'un client vous cherche, il vous trouve et voit tout de suite qui vous êtes. On met en valeur ce qui vous rend unique, avec un design soigné qui inspire confiance et donne envie de vous contacter. Idéal pour être visible rapidement et sérieusement.</p>
+        </div>
+      </article>
+      <article class="svc tilt rv d1">
+        <div class="svc-inner">
+          <svg class="svc-icon" viewBox="0 0 48 48"><path d="M24 6l16 8v12q0 12-16 17Q8 38 8 26V14Z" fill="none" stroke="#E0324A" stroke-width="2" stroke-linejoin="round"/><path d="M17 24l5 5 10-11" fill="none" stroke="#E0324A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="num">02</div><h3>Site sur mesure</h3>
+          <p>Un site entièrement pensé selon vos besoins et votre image, sans modèle générique. Vous décrivez votre vision, vos envies, votre ambiance, et nous la transformons en un site unique qui ne ressemble à aucun autre. Chaque détail est travaillé pour coller à votre marque : couleurs, animations, structure, ton. C'est le choix de ceux qui veulent vraiment se démarquer et marquer les esprits dès la première visite.</p>
+        </div>
+      </article>
+      <article class="svc tilt rv d2">
+        <div class="svc-inner">
+          <svg class="svc-icon" viewBox="0 0 48 48"><path d="M12 16l2 26q0 2 2 2h16q2 0 2-2l2-26Z" fill="none" stroke="#E0324A" stroke-width="2" stroke-linejoin="round"/><path d="M18 16v-5q0-5 6-5t6 5v5" fill="none" stroke="#E0324A" stroke-width="2"/><path d="M12 16h24" stroke="#E0324A" stroke-width="2"/></svg>
+          <div class="num">03</div><h3>Boutique en ligne</h3>
+          <p>Vendez vos produits directement depuis votre site, 24 heures sur 24, sans dépendre uniquement des réseaux sociaux. On construit une boutique avec une présentation soignée de chaque produit et une navigation simple qui donne envie d'acheter. Vos clients commandent en quelques clics, et vous, vous gérez tout facilement. C'est votre commerce ouvert en permanence, même quand votre local est fermé.</p>
+        </div>
+      </article>
+      <article class="svc tilt rv d3">
+        <div class="svc-inner">
+          <svg class="svc-icon" viewBox="0 0 48 48"><path d="M27 5 13 27h9l-2 16 16-24H26Z" fill="#E0324A" opacity=".9"/></svg>
+          <div class="num">04</div><h3>Refonte & mise à jour</h3>
+          <p>Votre site est dépassé, lent ou mal adapté au téléphone ? On lui redonne une seconde vie. On le modernise, on le rend plus rapide, plus clair et parfaitement adapté à tous les écrans. Un site vieillissant fait fuir les clients sans que vous le sachiez ; un site moderne, lui, les rassure et les retient. On repart de l'existant pour en faire quelque chose dont vous serez fier de partager le lien.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PROCESS ═══════ -->
+<section class="process" id="process">
+  <canvas id="processGL"></canvas>
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kicker">Comment ça marche</div>
+      <h2>De l'idée au site<br>en ligne</h2>
+      <p>Pas de jargon, pas d'attente interminable. Quatre étapes claires, et votre commerce est en ligne.</p>
+    </div>
+    <div class="timeline">
+      <div class="tstep rv"><div class="dot">01</div><h3>Vous choisissez</h3><p>Vous sélectionnez votre forfait et vous nous dites ce que vous voulez : couleurs, style, contenu.</p></div>
+      <div class="tstep rv d1"><div class="dot">02</div><h3>On conçoit</h3><p>On construit votre site sur mesure, sans modèle générique, en respectant votre image de marque.</p></div>
+      <div class="tstep rv d2"><div class="dot">03</div><h3>Vous validez</h3><p>On vous montre le résultat en direct. Vous regardez, vous ressentez, et vous nous dites ce qui doit changer. On ajuste ensemble, tranquillement, jusqu'à ce que le site vous ressemble vraiment et que vous soyez fier de le partager.</p></div>
+      <div class="tstep rv d3"><div class="dot">04</div><h3>C'est en ligne</h3><p>Votre site est publié, prêt à attirer de nouveaux clients. Vous êtes là, vous êtes présent, vous êtes sur la plateforme.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ POURQUOI ═══════ -->
+<section class="why">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="kicker">Pourquoi choisir <span class="red">W</span>eb<span class="red">C</span>raft ?</div>
+      <h2>Ce qui nous<br>rend différents</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rv"><div class="why-big" data-count="5">0</div><div class="why-label">jours de livraison</div><p>On ne vous fait pas attendre des semaines. Votre site est prêt en quelques jours.</p></div>
+      <div class="why-card rv d1"><div class="why-big">Fixe</div><div class="why-label">prix transparent</div><p>Un prix clair, affiché d'avance, sans surprise. Vous savez exactement ce que vous payez.</p></div>
+      <div class="why-card rv d2"><div class="why-big">1 mois</div><div class="why-label">de soutien inclus</div><p>Après la mise en ligne, on reste disponibles pour vos questions et ajustements.</p></div>
+      <div class="why-card rv d3"><div class="why-big" data-count="0">0</div><div class="why-label">modèle copié-collé</div><p>Chaque site est unique, pensé pour votre commerce et personne d'autre.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FORFAITS ═══════ -->
+<section class="assure" id="confiance">
+  <div class="wrap">
+    <div class="head rv" style="text-align:center; max-width: 860px; margin: 0 auto 50px;">
+      <div class="kicker">Notre engagement</div>
+      <h2>Vous êtes entre<br><span class="hl">de bonnes mains</span></h2>
+      <p style="margin:0 auto;">Un site <span style="color:var(--red)">W</span>eb<span style="color:var(--red)">C</span>raft n'est pas une dépense — <em>c'est un outil qui travaille pour vous.</em></p>
+    </div>
+    <div class="assure-grid">
+      <div class="claim rv">
+        <div class="claim-tag">PROFIT</div>
+        <h3>Un site qui <span class="hl">génère du profit</span></h3>
+        <p>Chaque page est pensée pour convertir : capter l'attention en quelques secondes, inspirer confiance, et transformer les visiteurs en appels, en réservations et en ventes. <em>Votre site travaille pour vous — même quand vous dormez.</em></p>
+      </div>
+      <div class="claim rv d1">
+        <div class="claim-tag">PRÉSENCE</div>
+        <h3>Une <span class="hl">présence en ligne</span> qui s'impose</h3>
+        <p>Être introuvable en ligne, c'est laisser vos clients à la concurrence. On construit une image forte, crédible et mémorable, <em>qui met votre commerce à la hauteur des plus grands.</em></p>
+      </div>
+      <div class="claim rv d2">
+        <div class="claim-tag">VISION</div>
+        <h3>Toujours <span class="hl-gold">vers l'avant</span></h3>
+        <p>C'est l'idéologie <span style="color:var(--red)">W</span>eb<span style="color:var(--red)">C</span>raft : avancer, innover, viser plus haut. Design moderne, technologies actuelles, détails soignés — <em>votre site évolue avec votre ambition.</em></p>
+      </div>
+    </div>
+    <div class="assure-cta rv">
+      <button class="btn btn-primary" onclick="openForfaitsPage()">Voir les forfaits <span class="arrow">→</span></button>
+      <a href="#" class="btn btn-ghost" onclick="openCommandePage(); return false;">Débuter mon projet</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PAGE IDENTITÉ (overlay) ═══════ -->
+<div class="identite-page" id="identitePage" aria-hidden="true">
+  <button class="fp-back show" onclick="closeIdentitePage()" aria-label="Fermer">✕</button>
+  <section class="identite">
+    <div class="wrap">
+      <div class="head rv" style="text-align:center; max-width: 820px; margin: 0 auto 34px;">
+        <div class="kicker">Notre identité</div>
+        <h2>Une agence qui<br><span class="hl">avance avec vous</span></h2>
+      </div>
+      <div class="id-grid">
+        <div class="id-text rv">
+          <h3>Née d'une ambition simple</h3>
+          <p><span class="red" style="color:var(--red)">W</span>eb<span style="color:var(--red)">C</span>raft est une nouvelle agence web née d'une ambition simple : <em>aider les commerces à prospérer</em> dans un monde où la présence en ligne est devenue essentielle. Chaque entreprise, petite ou grande, mérite un site web moderne, professionnel et performant qui reflète réellement son identité.</p>
+          <h3>S'améliorer chaque jour</h3>
+          <p>Notre objectif est de nous améliorer chaque jour afin d'offrir des solutions toujours plus innovantes. Nous investissons continuellement dans les nouvelles technologies, l'intelligence artificielle et le design moderne pour créer des expériences numériques qui <em>inspirent confiance et génèrent des résultats concrets</em>.</p>
+          <h3>Au service des commerçants</h3>
+          <p>Nous mettons nos connaissances, notre créativité et notre passion au service des commerçants. Nous ne créons pas seulement des sites web : nous développons une <em>présence en ligne</em> capable d'attirer de nouveaux clients, de renforcer une image de marque et d'accompagner chaque entreprise dans sa croissance.</p>
+          <h3 class="gold">Une vision durable</h3>
+          <p>Notre vision est de construire un avenir où chaque commerce peut évoluer avec son époque sans être limité par la technologie. En travaillant avec <span style="color:var(--red)">W</span>eb<span style="color:var(--red)">C</span>raft, vous choisissez un partenaire qui <em>avance avec le temps</em>, innove sans cesse et transforme vos idées en une présence digitale forte, élégante et durable.</p>
+        </div>
+        <div class="id-visual rv d1">
+          <div class="laptop">
+            <div class="laptop-screen">
+              <div class="ls-inner">
+                <div class="ls-nav">
+                  <span class="ls-logo"><span class="r">W</span>EB<span class="r">C</span>RAFT</span>
+                  <span class="ls-links"><i></i><i></i><i></i></span>
+                </div>
+                <div class="ls-hero">
+                  <div class="ls-kicker">Création de sites<br>sur mesure</div>
+                  <div class="ls-title">Des sites conçus pour votre commerce</div>
+                  <div class="ls-btns"><span class="ls-btn red"></span><span class="ls-btn ghost"></span></div>
+                  <div class="ls-cubes"><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+        </div>
+      </div>
+      <div class="id-slogan rv">Créer<span>◆</span>Présenter<span>◆</span>Avancer</div>
+      <div class="id-cta rv">
+        <button class="btn btn-primary" onclick="closeIdentitePage(); openForfaitsPage();">Voir les forfaits <span class="arrow">→</span></button>
+        <a href="#" class="btn btn-ghost" onclick="openCommandePage(); return false;">Débuter mon projet</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════ VUE CONFIDENTIALITÉ ═══════ -->
+<div class="legal-page" id="confidPage" aria-hidden="true">
+  <button class="fp-back show" onclick="closeConfidPage()" aria-label="Fermer">✕</button>
+  <div class="lwrap">
+    <h2>Politique de confidentialité</h2>
+    <div class="ldate">Dernière mise à jour : juillet 2026</div>
+    <h3>Qui nous sommes</h3>
+    <p><span style="color:var(--red)">W</span>eb<span style="color:var(--red)">C</span>raft Innovations est une agence de création de sites web située à Laval, Québec. Pour toute question relative à vos renseignements personnels : <a href="mailto:webcraftinnov26@gmail.com">webcraftinnov26@gmail.com</a> ou 514-290-6183.</p>
+    <h3>Renseignements collectés</h3>
+    <p>Lorsque vous remplissez notre formulaire de demande, nous collectons : prénom, nom, téléphone, courriel et la description de votre projet, ainsi que, si vous les fournissez, le nom et l'adresse de votre commerce.</p>
+    <h3>Utilisation</h3>
+    <p>Ces renseignements servent uniquement à répondre à votre demande, préparer votre projet et communiquer avec vous. Ils ne sont jamais vendus ni partagés à des fins publicitaires.</p>
+    <h3>Transmission et conservation</h3>
+    <p>Les formulaires sont acheminés vers notre boîte courriel via le service FormSubmit, puis conservés dans notre messagerie le temps nécessaire au suivi de votre demande.</p>
+    <h3>Témoins (cookies)</h3>
+    <p>Ce site n'utilise aucun témoin de suivi publicitaire ni outil de profilage.</p>
+    <h3>Vos droits</h3>
+    <p>Conformément à la législation québécoise applicable, vous pouvez demander l'accès à vos renseignements, leur rectification ou leur suppression en nous écrivant à l'adresse ci-dessus. Nous répondons dans un délai raisonnable.</p>
+  </div>
+</div>
+
+<!-- ═══════ VUE COMMANDE (overlay) ═══════ -->
+<div class="commande-page" id="commandePage" aria-hidden="true">
+  <button class="fp-back show" onclick="closeCommandePage()" aria-label="Fermer">✕</button>
+  <div class="cwrap">
+    <div class="steps"><span class="on" id="cmdStep1">01 — Votre forfait</span><span class="sep"></span><span>02 — Vos infos</span><span class="sep"></span><span>03 — Confirmation</span></div>
+    <h1 id="cmdTitle">Débuter votre projet</h1>
+    <p class="lede" id="cmdLede">Remplissez le formulaire — on vous recontacte en moins de 24 h. Aucun paiement requis à cette étape.</p>
+    <div class="cgrid">
+      <aside class="pack-card" id="packCard">
+        <canvas id="packFx" aria-hidden="true"></canvas>
+        <div class="pack-inner" id="packInner"></div>
+      </aside>
+      <section class="form-card">
+        <h2>Vos informations</h2>
+        <p class="form-sub">Les champs marqués * sont requis pour envoyer votre demande.</p>
+        <form id="orderForm" action="https://formsubmit.co/webcraftinnov26@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nouvelle demande WebCraft">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_autoresponse" id="autoresponseInput" value="Bonjour, Merci pour votre confiance — votre demande est bien reçue. Notre équipe vous contactera dans les 24 h pour discuter de votre projet et lancer la création de votre site. D'ici là, pour toute question : 514-290-6183 ou webcraftinnov26@gmail.com. À très vite, L'équipe WebCraft Innovations — Laval, Québec">
+          <input type="hidden" name="_next" id="nextInput" value="https://webcraftinnov26-del.github.io/WebCraft/?merci=1">
+          <input type="hidden" name="Forfait" id="forfaitInput" value="À déterminer">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="row2">
+            <div class="field"><label for="prenom">Prénom <span class="req">*</span></label>
+              <input type="text" id="prenom" name="Prénom" autocomplete="given-name"><div class="err">Entrez votre prénom.</div></div>
+            <div class="field"><label for="nom">Nom <span class="req">*</span></label>
+              <input type="text" id="nom" name="Nom" autocomplete="family-name"><div class="err">Entrez votre nom.</div></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="tel">Téléphone <span class="req">*</span></label>
+              <input type="tel" id="tel" name="Téléphone" autocomplete="tel" placeholder="514-000-0000"><div class="err">Entrez un numéro de téléphone valide.</div></div>
+            <div class="field"><label for="email">Courriel <span class="req">*</span></label>
+              <input type="email" id="email" name="Courriel" autocomplete="email" placeholder="vous@exemple.com"><div class="err">Entrez une adresse courriel valide.</div></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="commerce">Nom du commerce <span class="opt">(facultatif)</span></label>
+              <input type="text" id="commerce" name="Nom du commerce" autocomplete="organization" placeholder="Ex. : Salon Bella, Garage Pro…"></div>
+            <div class="field"><label for="adresse">Adresse <span class="opt">(facultatif)</span></label>
+              <input type="text" id="adresse" name="Adresse" autocomplete="street-address" placeholder="Ville ou adresse complète"></div>
+          </div>
+          <div class="field"><label for="notes">Notes — parlez-nous de votre projet <span class="req">*</span></label>
+            <textarea id="notes" name="Notes" placeholder="Type de commerce, idées, exemples de sites que vous aimez…"></textarea>
+            <div class="err">Décrivez brièvement votre projet.</div></div>
+          <button type="submit" class="submit-btn" id="submitBtn">Envoyer ma demande →</button>
+          <p class="form-foot">Réponse en moins de 24 h · Vos informations restent confidentielles.</p>
+        </form>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ VUE MERCI (overlay) ═══════ -->
+<div class="merci-page" id="merciPage" aria-hidden="true">
+  <div class="mcard">
+    <svg class="mcheck" viewBox="0 0 120 120" aria-hidden="true">
+      <circle class="circle" cx="60" cy="60" r="50"/><path class="tick" d="M38 62 L54 78 L84 44"/>
+    </svg>
+    <div class="msent">Envoyé ✓ — demande validée</div>
+    <h2>Merci, c'est bien reçu !</h2>
+    <p class="mmsg" id="packConfirm" style="display:none; margin-bottom:12px;"></p>
+    <p class="mmsg">Votre demande est entre nos mains. <strong>Nous vous contacterons dans les 24 h</strong> pour lancer votre projet.</p>
+    <p class="msub">Gardez un œil sur votre boîte courriel (et vos indésirables, au cas où).</p>
+    <button class="btn btn-primary" onclick="closeMerciPage()">Retour à l'accueil →</button>
+  </div>
+</div>
+
+<!-- ═══════ PAGE FORFAITS (overlay) ═══════ -->
+<div class="forfaits-page" id="forfaitsPage" aria-hidden="true">
+  <button class="fp-back show" onclick="closeForfaitsPage()" aria-label="Fermer les forfaits">✕</button>
+<section class="pricing" id="forfaits">
+  <canvas id="pricingGL"></canvas>
+  <div class="wrap">
+    <div class="head rv" style="text-align:center; margin: 0 auto 22px;">
+      <div class="kicker">Nos forfaits</div>
+      <h2>Un prix clair,<br>deux formules</h2>
+      <p style="margin:0 auto;">Choisissez la formule qui correspond à votre projet. Prix fixe, sans surprise.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card rv">
+        <div class="price-name">Site Vitrine</div>
+        <div class="price-tag">140$</div>
+        <div class="price-note">Forfait unique</div>
+        <ul class="price-list">
+          <li>Thème, couleurs et contenu personnalisés</li>
+          <li>Présentation de votre commerce et vos produits</li>
+          <li>Dépôt de votre menu, on s'occupe du reste</li>
+          <li>Livraison rapide en 3-5 jours</li>
+          <li>Site adapté au téléphone et à l'ordinateur</li>
+          <li>Vos coordonnées et réseaux bien visibles</li>
+        </ul>
+        <a href="#" class="btn btn-primary" onclick="openCommandePage('vitrine'); return false;">Choisir ce forfait <span class="arrow">→</span></a>
+      </div>
+      <div class="price-card premium rv d1">
+        <div class="price-badge">PREMIUM</div>
+        <div class="price-name">Sur Mesure +</div>
+        <div class="price-tag">230$</div>
+        <div class="price-note">L'expérience complète</div>
+        <div class="price-3d-preview"><canvas id="mini3d"></canvas><span class="p3d-label">3D en direct ◆ inclus</span></div>
+        <ul class="price-list">
+          <li>Tout le forfait Vitrine, en plus complet</li>
+          <li>Comptes clients (connexion, inscription)</li>
+          <li>Paiement en ligne intégré</li>
+          <li>Système de réservation possible</li>
+          <li>Plus de pages, site bilingue possible</li>
+          <li class="feat-3d">Animations 3D intégrées à votre site</li>
+        </ul>
+        <a href="#" class="btn btn-primary" onclick="openCommandePage('premium'); return false;">Choisir ce forfait <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ═══════ CTA FINAL ═══════ -->
+<section class="final">
+  <canvas class="echo-3d" id="echoGL"></canvas>
+  <div class="final-inner rv">
+    <h2 class="anton">Votre commerce mérite<br>un site à sa hauteur.</h2>
+    <p class="final-big">Votre avenir se construit en ligne, et il commence aujourd'hui. Avec <span class="red">W</span>eb<span class="red">C</span>raft, votre commerce avance, se démarque et attire les clients qu'il mérite. Fini l'époque où l'on passait à côté de vous : votre site travaille pour vous, jour et nuit. On vous donne les moyens des plus grands, à un prix juste et sans complications. <span class="red">W</span>eb<span class="red">C</span>raft va de l'avant — et vous emmène avec lui.</p>
+    <a href="#" class="btn btn-primary" onclick="openCommandePage(); return false;">Débuter mon projet <span class="arrow">→</span></a>
+    <div class="final-reassure"><span>✓ Livraison rapide</span><span>✓ Prix transparent</span><span>✓ Soutien inclus</span></div>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer id="contact">
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <a class="foot-box" href="mailto:webcraftinnov26@gmail.com">
+        <svg viewBox="0 0 40 40"><rect x="7" y="11" width="26" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 13l12 9 12-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        Courriel
+      </a>
+      <a class="foot-box" href="https://www.instagram.com/webcraft.inv?igsh=MXFjeDQ1NGkzazM2bg%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+        <svg viewBox="0 0 40 40"><rect x="9" y="9" width="22" height="22" rx="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="26.5" cy="13.5" r="1.6" fill="currentColor"/></svg>
+        Instagram
+      </a>
+      <a class="foot-box" href="tel:5142906183">
+        <svg viewBox="0 0 40 40"><path d="M12 9h5l2 6-3 2q2 6 7 8l2-3 6 2v5q0 2-2 2Q18 33 10 23 9 21 9 12 9 9 12 9Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        Téléphone
+      </a>
+    </div>
+    <div class="foot-bottom">
+      <div class="brand"><span class="main"><span class="red">W</span>EB<span class="red">C</span>RAFT</span></div>
+      <div class="foot-socials"><a href="tel:5142906183">514-290-6183</a><a href="mailto:webcraftinnov26@gmail.com">webcraftinnov26@gmail.com</a></div>
+      <div style="opacity:.5; font-size:.82rem;">© 2026 <span style="color:var(--red)">W</span>eb<span style="color:var(--red)">C</span>raft Innovations — Tous droits réservés · Laval, Québec <span style="opacity:.6; font-family:'Space Mono',monospace; font-size:.72rem;">· v4.0</span> · <a href="#" onclick="openConfidPage(); return false;" style="color:inherit;">Confidentialité</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════ PAGE CONTACT ═══════ -->
+<div class="contact-page" id="contactPage">
+  <canvas class="contact-gl" id="contactGL"></canvas>
+  <button class="contact-back" onclick="closeContactPage()" aria-label="Fermer">←</button>
+  <div class="contact-inner">
+    <div class="contact-kicker">Contact</div>
+    <h2 class="contact-title anton">Parlons de<br>votre projet</h2>
+    <p class="contact-sub">Une question, une idée, un commerce à faire décoller ? Écrivez-nous ou appelez-nous directement — on répond vite.</p>
+    <div class="contact-cards">
+      <a class="contact-card" href="mailto:webcraftinnov26@gmail.com">
+        <div class="cc-glow"></div>
+        <svg class="cc-icon" viewBox="0 0 48 48"><rect x="8" y="13" width="32" height="22" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M9 15l15 12 15-12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <div class="cc-label">Courriel</div>
+        <div class="cc-value">webcraftinnov26@gmail.com</div>
+        <div class="cc-action">Ouvrir dans Gmail →</div>
+      </a>
+      <a class="contact-card" href="tel:5142906183">
+        <div class="cc-glow"></div>
+        <svg class="cc-icon" viewBox="0 0 48 48"><path d="M14 10h6l2.5 7-3.5 2.4q2.4 7 8.6 9.6l2.4-3.5 7 2.5v6q0 2.5-2.5 2.5Q22 40 12 30 8 26 8 14.5 8 10 14 10Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <div class="cc-label">Téléphone</div>
+        <div class="cc-value">514-290-6183</div>
+        <div class="cc-action">Appeler maintenant →</div>
+      </a>
+      <a class="contact-card" href="https://www.instagram.com/webcraft.inv?igsh=MXFjeDQ1NGkzazM2bg%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+        <div class="cc-glow"></div>
+        <svg class="cc-icon" viewBox="0 0 48 48"><rect x="11" y="11" width="26" height="26" rx="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="24" cy="24" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="32" cy="16" r="1.9" fill="currentColor"/></svg>
+        <div class="cc-label">Instagram</div>
+        <div class="cc-value">@webcraft.inv</div>
+        <div class="cc-action">Voir le profil →</div>
+      </a>
+    </div>
+    <div class="contact-foot"><span class="red">W</span>eb<span class="red">C</span>raft Innovations · Laval, Québec</div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+window.scrollTo(0,0);document.documentElement.scrollTop=0;document.body.scrollTop=0;
+if("scrollRestoration" in history)history.scrollRestoration="manual";
+window.addEventListener("load",function(){window.scrollTo(0,0);setTimeout(function(){window.scrollTo(0,0);},100);});
+/* ═══════ 1. Barre de progression + nav ═══════ */
+const nav = document.getElementById('nav');
+const progress = document.getElementById('progress');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  progress.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+  nav.classList.toggle('shrink', h.scrollTop > 40);
+}, { passive: true });
+
+/* ═══════ 2. Menu mobile ═══════ */
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => { burger.classList.toggle('open'); navLinks.classList.toggle('open'); });
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { burger.classList.remove('open'); navLinks.classList.remove('open'); }));
+
+/* ═══════ 4. Reveal au scroll ═══════ */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.14 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ═══════ 5. Compteurs ═══════ */
+const cObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, target = +el.dataset.count;
+    let cur = 0; const step = Math.max(1, target / 40);
+    const tick = () => { cur += step; if (cur >= target) { el.textContent = target; return; } el.textContent = Math.floor(cur); requestAnimationFrame(tick); };
+    tick(); cObs.unobserve(el);
+  });
+}, { threshold: 0.6 });
+document.querySelectorAll('[data-count]').forEach(el => cObs.observe(el));
+
+/* ═══════ 6. Tilt 3D des cartes services ═══════ */
+if (matchMedia('(hover:hover)').matches) {
+  document.querySelectorAll('.tilt').forEach(card => {
+    card.addEventListener('pointermove', (e) => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      card.style.transform = `perspective(800px) rotateY(${(px-.5)*12}deg) rotateX(${(.5-py)*12}deg) translateY(-4px)`;
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+    card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+  });
+}
+
+/* ═══════ 7. Pages Forfaits & Identité ═══════ */
+const forfaitsPage = document.getElementById('forfaitsPage');
+const identitePage = document.getElementById('identitePage');
+function showOverlay(page) {
+  page.classList.add('open');
+  page.setAttribute('aria-hidden', 'false');
+  page.scrollTop = 0;
+  page.querySelectorAll('.rv').forEach(el => el.classList.add('in'));   // contenu visible immédiatement
+  document.body.style.overflow = 'hidden';
+  burger.classList.remove('open'); navLinks.classList.remove('open');
+  requestAnimationFrame(() => window.dispatchEvent(new Event('resize')));
+  setTimeout(() => window.dispatchEvent(new Event('resize')), 90);
+}
+function hideOverlay(page) {
+  page.classList.remove('open');
+  page.setAttribute('aria-hidden', 'true');
+  var still = ['forfaitsPage','identitePage','commandePage','merciPage','confidPage'].some(function (id) {
+    var el = document.getElementById(id); return el && el.classList.contains('open');
+  });
+  document.body.style.overflow = still ? 'hidden' : '';
+}
+function openForfaitsPage() { showOverlay(forfaitsPage); }
+function closeForfaitsPage() { hideOverlay(forfaitsPage); }
+function openConfidPage() { showOverlay(document.getElementById('confidPage')); }
+function closeConfidPage() { hideOverlay(document.getElementById('confidPage')); }
+function openIdentitePage() { showOverlay(identitePage); }
+function closeIdentitePage() { hideOverlay(identitePage); }
+
+
+/* ═══════ 7b. Vues Commande & Merci ═══════ */
+const commandePage = document.getElementById('commandePage');
+const merciPage = document.getElementById('merciPage');
+
+const PACKS = {
+  vitrine: {
+    name: "Site Vitrine", price: "140$", note: "paiement unique", badge: null, color: "#E0324A",
+    features: [
+      "Site une page, design premium personnalisé",
+      "Adapté mobile, tablette et ordinateur",
+      "Sections : accueil, services, à propos, contact",
+      "Référencement de base (SEO) inclus",
+      "Livraison rapide"
+    ]
+  },
+  premium: {
+    name: "Sur Mesure +", price: "230$", note: "paiement unique", badge: "Service professionnel", color: "#c9a227",
+    features: [
+      "Tout le forfait Site Vitrine, plus :",
+      "Animations et effets 3D immersifs",
+      "Pages multiples selon vos besoins",
+      "Optimisation avancée (vitesse + SEO)",
+      "Accompagnement prioritaire"
+    ]
+  }
+};
+
+function escHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function renderPack(k) {
+  var p = PACKS[k], other = k === 'vitrine' ? 'premium' : 'vitrine';
+  document.getElementById('packInner').innerHTML =
+    '<div class="pack-eyebrow">Forfait sélectionné</div>' +
+    (p.badge ? '<div class="pack-badge">' + escHtml(p.badge) + '</div>' : '') +
+    '<h3 class="pack-name">' + escHtml(p.name) + '</h3>' +
+    '<div class="pack-price">' + escHtml(p.price) + ' <small>' + escHtml(p.note) + '</small></div>' +
+    '<ul class="pack-list">' + p.features.map(function (f) { return '<li>' + escHtml(f) + '</li>'; }).join('') + '</ul>' +
+    '<div class="pack-note">Le prix est fixe — aucun frais caché. Les détails précis sont confirmés ensemble avant de commencer.</div>' +
+    '<div class="pack-switch"><button type="button" onclick="openCommandePage(\'' + other + '\')">Voir plutôt le forfait ' + escHtml(PACKS[other].name) + ' →</button></div>';
+  var card = document.getElementById('packCard');
+  card.classList.add('chosen');
+  var old = card.querySelector('.pack-ribbon'); if (old) old.remove();
+  var rb = document.createElement('div'); rb.className = 'pack-ribbon'; rb.textContent = '✓ Sélectionné';
+  card.appendChild(rb);
+  commandePage.classList.toggle('theme-premium', k === 'premium');
+  document.getElementById('cmdTitle').innerHTML = 'Forfait <span class="accent">' + escHtml(p.name) + '</span>';
+  document.getElementById('cmdLede').innerHTML = '<span class="ch-price-line">' + escHtml(p.price) + ' — ' + escHtml(p.note) + '</span><br>Excellente décision. Confirmez vos informations ci-dessous — on vous recontacte en moins de 24 h.';
+  document.getElementById('cmdStep1').innerHTML = '01 — Votre forfait <span class="done">✓</span>';
+  document.getElementById('forfaitInput').value = p.name + ' (' + p.price + ')';
+  document.querySelector('#orderForm input[name="_subject"]').value = 'Nouvelle demande WebCraft — ' + p.name;
+  document.getElementById('autoresponseInput').value =
+    "Bonjour, Merci pour votre confiance — votre demande pour le forfait " + p.name + " (" + p.price + ") est bien reçue. " +
+    "Notre équipe vous contactera dans les 24 h pour discuter de votre projet et lancer la création de votre site. " +
+    "D'ici là, pour toute question : 514-290-6183 ou webcraftinnov26@gmail.com. À très vite, L'équipe WebCraft Innovations — Laval, Québec";
+  document.getElementById('nextInput').value = 'https://webcraftinnov26-del.github.io/WebCraft/?merci=1&forfait=' + k;
+  startPackFx(p.color);
+}
+
+function renderSelector() {
+  commandePage.classList.remove('theme-premium');
+  document.getElementById('packCard').classList.remove('chosen');
+  var old = document.querySelector('#packCard .pack-ribbon'); if (old) old.remove();
+  document.getElementById('cmdTitle').textContent = 'Débuter votre projet';
+  document.getElementById('cmdLede').textContent = 'Choisissez votre forfait, remplissez le formulaire — on vous recontacte en moins de 24 h. Aucun paiement requis à cette étape.';
+  document.getElementById('cmdStep1').innerHTML = '01 — Votre forfait';
+  document.getElementById('packInner').innerHTML =
+    '<div class="pack-eyebrow">Choisissez votre forfait</div>' +
+    '<div class="cselector">' +
+    Object.keys(PACKS).map(function (k) {
+      var p = PACKS[k];
+      return '<button type="button" onclick="openCommandePage(\'' + k + '\')"><div class="s-name">' + escHtml(p.name) + '</div><div class="s-price">' + escHtml(p.price) + ' — ' + escHtml(p.note) + '</div></button>';
+    }).join('') +
+    '</div>' +
+    '<div class="pack-note">Pas certain ? Choisissez Site Vitrine — on pourra toujours passer au Sur Mesure + ensuite.</div>';
+}
+
+function openCommandePage(k) {
+  if (PACKS[k]) renderPack(k); else renderSelector();
+  showOverlay(commandePage);
+}
+function closeCommandePage() { hideOverlay(commandePage); }
+
+function openMerciPage(k) {
+  var el = document.getElementById('packConfirm');
+  if (PACKS[k]) {
+    el.innerHTML = 'Forfait confirmé : <strong style="color:' + PACKS[k].color + '">' + escHtml(PACKS[k].name) + ' (' + escHtml(PACKS[k].price) + ')</strong>';
+    el.style.display = 'block';
+  } else { el.style.display = 'none'; }
+  showOverlay(merciPage);
+}
+function closeMerciPage() { hideOverlay(merciPage); }
+
+/* Cubes isométriques flottants (couleur du forfait) */
+var packFxState = { started: false, color: '#E0324A', cubes: [] };
+function startPackFx(color) {
+  packFxState.color = color;
+  var cv = document.getElementById('packFx');
+  if (!cv || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ctx = cv.getContext('2d');
+  function size() {
+    var d = Math.min(devicePixelRatio || 1, 2);
+    cv.width = cv.offsetWidth * d; cv.height = cv.offsetHeight * d;
+    ctx.setTransform(d, 0, 0, d, 0, 0);
+  }
+  if (!packFxState.started) {
+    addEventListener('resize', size);
+    for (var i = 0; i < 11; i++) {
+      packFxState.cubes.push({ x: Math.random(), y: Math.random(), s: 7 + Math.random() * 9, sp: .4 + Math.random() * .7, ph: Math.random() * 6.28 });
+    }
+  }
+  size();
+  function shade(hex, f) {
+    var n = parseInt(hex.slice(1), 16), r = (n >> 16) * f, g = ((n >> 8) & 255) * f, b = (n & 255) * f;
+    return 'rgb(' + (r | 0) + ',' + (g | 0) + ',' + (b | 0) + ')';
+  }
+  if (packFxState.started) return; packFxState.started = true;
+  (function loop(t) {
+    requestAnimationFrame(loop);
+    if (!commandePage.classList.contains('open')) return;
+    var w = cv.offsetWidth, h = cv.offsetHeight, col = packFxState.color;
+    ctx.clearRect(0, 0, w, h);
+    packFxState.cubes.forEach(function (c) {
+      var x = c.x * w, y = c.y * h + Math.sin((t || 0) / 1000 * c.sp + c.ph) * 9, s = c.s;
+      ctx.fillStyle = col;
+      ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + s, y + s * .5); ctx.lineTo(x, y + s); ctx.lineTo(x - s, y + s * .5); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = shade(col, .55);
+      ctx.beginPath(); ctx.moveTo(x - s, y + s * .5); ctx.lineTo(x, y + s); ctx.lineTo(x, y + s * 1.8); ctx.lineTo(x - s, y + s * 1.3); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = shade(col, .32);
+      ctx.beginPath(); ctx.moveTo(x + s, y + s * .5); ctx.lineTo(x, y + s); ctx.lineTo(x, y + s * 1.8); ctx.lineTo(x + s, y + s * 1.3); ctx.closePath(); ctx.fill();
+    });
+  })(0);
+}
+
+/* Validation : envoi seulement si tout est rempli et valide */
+(function () {
+  var form = document.getElementById('orderForm');
+  var btn = document.getElementById('submitBtn');
+  function setInvalid(el, bad) { el.closest('.field').classList.toggle('invalid', bad); return !bad; }
+  function validate() {
+    var ok = true;
+    var prenom = document.getElementById('prenom'), nom = document.getElementById('nom'),
+        tel = document.getElementById('tel'), email = document.getElementById('email'),
+        notes = document.getElementById('notes');
+    ok = setInvalid(prenom, prenom.value.trim().length < 2) && ok;
+    ok = setInvalid(nom, nom.value.trim().length < 2) && ok;
+    ok = setInvalid(tel, tel.value.replace(/\D/g, '').length < 10) && ok;
+    ok = setInvalid(email, !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim())) && ok;
+    ok = setInvalid(notes, notes.value.trim().length < 5) && ok;
+    return ok;
+  }
+  ['prenom', 'nom', 'tel', 'email', 'notes'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', function () {
+      this.closest('.field').classList.remove('invalid');
+    });
+  });
+  form.addEventListener('submit', function (e) {
+    if (!validate()) {
+      e.preventDefault();
+      var first = form.querySelector('.field.invalid input, .field.invalid textarea');
+      if (first) first.focus();
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours…';
+  });
+})();
+
+/* Retour de FormSubmit : ?merci=1&forfait=k → ouvrir la confirmation */
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (q.get('merci') === '1') {
+    openMerciPage((q.get('forfait') || '').toLowerCase());
+    history.replaceState({}, '', location.pathname);
+  }
+})();
+
+
+/* ═══════ Ancres : atterrir pile sur le titre de la section ═══════ */
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  var id = (a.getAttribute('href') || '').slice(1);
+  if (!id) return;
+  a.addEventListener('click', function (e) {
+    var sec = document.getElementById(id);
+    if (!sec) return;
+    e.preventDefault();
+    var target = sec.querySelector('.head') || sec;
+    var y = id === 'accueil' ? 0 : target.getBoundingClientRect().top + window.scrollY - 84;
+    window.scrollTo({ top: Math.max(0, y), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    burger.classList.remove('open'); navLinks.classList.remove('open');
+    history.replaceState(null, '', '#' + id);
+  });
+});
+
+/* ═══════ 7a. Fermeture clavier ═══════ */
+window.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  if (document.getElementById('contactPage').classList.contains('open')) closeContactPage();
+  else if (document.getElementById('confidPage').classList.contains('open')) closeConfidPage();
+  else if (merciPage.classList.contains('open')) closeMerciPage();
+  else if (commandePage.classList.contains('open')) closeCommandePage();
+  else if (identitePage.classList.contains('open')) closeIdentitePage();
+  else if (forfaitsPage.classList.contains('open')) closeForfaitsPage();
+});
+
+/* ═══════ 7b. Page Contact ═══════ */
+const contactPage = document.getElementById('contactPage');
+let contactGLStarted = false;
+let contactGLAlive = false;
+let contactGLResume = null;
+function openContactPage() {
+  contactPage.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  burger.classList.remove('open'); navLinks.classList.remove('open');
+  contactGLAlive = true;
+  if (!contactGLStarted) { contactGLStarted = true; initContactGL(); }
+  else if (contactGLResume) { contactGLResume(); }
+}
+function closeContactPage() { contactPage.classList.remove('open'); document.body.style.overflow = ['forfaitsPage','identitePage','commandePage','merciPage','confidPage'].some(function(id){var el=document.getElementById(id);return el&&el.classList.contains('open');}) ? 'hidden' : ''; contactGLAlive = false; }
+
+/* Scène 3D de la page contact : anneaux rouges qui pulsent */
+function initContactGL() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('contactGL');
+  if (!canvas) return;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(55, innerWidth/innerHeight, 0.1, 100);
+  camera.position.z = 10;
+  const grp = new THREE.Group(); scene.add(grp);
+  const rings = [];
+  for (let i = 0; i < 6; i++) {
+    const r = new THREE.Mesh(
+      new THREE.TorusGeometry(2 + i * 0.9, 0.05, 16, 80),
+      new THREE.MeshBasicMaterial({ color: 0xE0324A, transparent: true, opacity: 0.5 - i * 0.06 })
+    );
+    r.rotation.x = Math.PI / 2.4;
+    r.userData = { ph: i * 0.6 };
+    grp.add(r); rings.push(r);
+  }
+  scene.add(new THREE.AmbientLight(0xffffff, 1));
+  const mouse = { x: 0, y: 0 };
+  addEventListener('pointermove', e => { mouse.x = (e.clientX/innerWidth)*2-1; mouse.y = (e.clientY/innerHeight)*2-1; });
+  function resize() { renderer.setSize(innerWidth, innerHeight, false); camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  const clock = new THREE.Clock();
+  function loop() {
+    if (!contactGLAlive) return;
+    requestAnimationFrame(loop);
+    const t = clock.getElapsedTime();
+    rings.forEach((r, i) => { const s = 1 + Math.sin(t * 1.2 + r.userData.ph) * 0.08; r.scale.setScalar(s); r.rotation.z = t * 0.1 * (i%2?1:-1); });
+    grp.rotation.x = mouse.y * 0.3 + Math.PI * 0.02;
+    grp.rotation.y = mouse.x * 0.3;
+    renderer.render(scene, camera);
+  }
+  contactGLResume = loop;
+  loop();
+}
+
+/* ═══════ 7c. "Voir les services" — arrivée créative ═══════ */
+document.querySelectorAll('a[href="#services"]').forEach(a => {
+  a.addEventListener('click', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.svc').forEach((c, i) => {
+        c.style.animation = 'none'; void c.offsetWidth;
+        
+      });
+    }, 600);
+  });
+});
+
+[['.services',70,10],['.why',20,60],['.pricing',75,20],['.process',15,55]].forEach(([sel,l,t]) => {
+  const s = document.querySelector(sel); if (!s) return;
+  const o = document.createElement('div');
+  o.className = 'amb'; o.style.position = 'absolute';   // hors flux : corrige le vide en haut des sections
+  const size = 300 + Math.random()*200;
+  o.style.width = o.style.height = size+'px';
+  o.style.background = 'radial-gradient(circle, rgba(224,50,74,.18), transparent 70%)';
+  o.style.left = l+'%'; o.style.top = t+'%';
+  s.insertBefore(o, s.firstChild);
+});
+
+/* ═══════ 9. HERO 3D — grille de blocs "site" qui ondulent ═══════
+   Une grille de cubes rouges/sombres qui ondulent comme une vague,
+   réagit à la souris (profondeur + parallaxe). Évoque des blocs
+   de site web qui s'assemblent. */
+(function initHero() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('heroGL');
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0a0a0b, 0.055);
+  const camera = new THREE.PerspectiveCamera(55, innerWidth/innerHeight, 0.1, 100);
+  camera.position.set(0, 6, 14);
+  camera.lookAt(0, 0, 0);
+
+  const group = new THREE.Group();
+  scene.add(group);
+
+  // Grille de cubes
+  const COLS = 18, ROWS = 18, GAP = 1.05;
+  const cubes = [];
+  const geo = new THREE.BoxGeometry(0.55, 0.55, 0.55);
+  for (let x = 0; x < COLS; x++) {
+    for (let z = 0; z < ROWS; z++) {
+      const isRed = Math.random() > 0.82;
+      const mat = new THREE.MeshStandardMaterial({
+        color: isRed ? 0xE0324A : 0x1a1a1f,
+        metalness: 0.5, roughness: 0.45,
+        emissive: isRed ? 0x3a0a12 : 0x000000, emissiveIntensity: 0.6
+      });
+      const cube = new THREE.Mesh(geo, mat);
+      cube.position.set((x - COLS/2) * GAP, 0, (z - ROWS/2) * GAP);
+      cube.userData = { x, z };
+      group.add(cube);
+      cubes.push(cube);
+    }
+  }
+
+  // Lumières
+  const key = new THREE.DirectionalLight(0xffffff, 1.6); key.position.set(5, 12, 8); scene.add(key);
+  const rim = new THREE.PointLight(0xE0324A, 2.2, 40); rim.position.set(0, 6, 0); scene.add(rim);
+  scene.add(new THREE.AmbientLight(0x2a2430, 0.9));
+
+  const mouse = { x: 0, y: 0 };
+  addEventListener('pointermove', (e) => {
+    mouse.x = (e.clientX / innerWidth) * 2 - 1;
+    mouse.y = (e.clientY / innerHeight) * 2 - 1;
+  });
+
+  function resize() {
+    renderer.setSize(innerWidth, innerHeight, false);
+    camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+  }
+  addEventListener('resize', resize); resize();
+
+  const clock = new THREE.Clock();
+  let heroAlive = true;
+  function animate() {
+    if (!heroAlive) return;
+    requestAnimationFrame(animate);
+    const t = clock.getElapsedTime();
+    // Vague sur la hauteur des cubes
+    cubes.forEach(c => {
+      const d = Math.hypot(c.userData.x - COLS/2, c.userData.z - ROWS/2);
+      c.position.y = Math.sin(d * 0.6 - t * 1.6) * 0.9;
+      c.rotation.y = t * 0.15;
+      c.scale.y = 1 + (c.position.y + 0.9) * 0.4;
+    });
+    // Rotation lente + parallaxe souris
+    group.rotation.y += 0.0016;
+    camera.position.x += ((mouse.x * 4) - camera.position.x) * 0.03;
+    camera.position.y += ((6 - mouse.y * 2) - camera.position.y) * 0.03;
+    camera.lookAt(0, 0, 0);
+    renderer.render(scene, camera);
+  }
+  animate();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { if (!heroAlive) { heroAlive = true; animate(); } }
+      else { heroAlive = false; }
+    }), { threshold: 0 }).observe(canvas.closest('.hero'));
+  }
+})();
+
+/* ═══════ 9b. Mini scène 3D dans la carte Sur Mesure + ═══════ */
+(function initMini3D() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('mini3d');
+  if (!canvas) return;
+  const box = canvas.parentElement;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(50, box.clientWidth / box.clientHeight, 0.1, 100);
+  camera.position.z = 5;
+
+  // Petit "cube de site" doré qui tourne
+  const grp = new THREE.Group(); scene.add(grp);
+  const mat = new THREE.MeshStandardMaterial({ color: 0xc9a227, metalness: .8, roughness: .25, emissive: 0x2a2008, emissiveIntensity: .5 });
+  const cube = new THREE.Mesh(new THREE.BoxGeometry(1.6, 1.6, 1.6), mat);
+  grp.add(cube);
+  const wire = new THREE.Mesh(new THREE.BoxGeometry(1.75, 1.75, 1.75), new THREE.MeshBasicMaterial({ color: 0xc9a227, wireframe: true, transparent: true, opacity: .25 }));
+  grp.add(wire);
+  const mini3dLight1 = new THREE.DirectionalLight(0xffffff, 2); mini3dLight1.position.set(3, 4, 5); scene.add(mini3dLight1);
+  const mini3dLight2 = new THREE.PointLight(0xc9a227, 2, 20); mini3dLight2.position.set(-3, 0, 4); scene.add(mini3dLight2);
+  scene.add(new THREE.AmbientLight(0x333333, 1));
+
+  const mouse = { x: 0, y: 0 };
+  box.addEventListener('pointermove', (e) => {
+    const r = box.getBoundingClientRect();
+    mouse.x = (e.clientX - r.left) / r.width - .5;
+    mouse.y = (e.clientY - r.top) / r.height - .5;
+  });
+  function resize() { renderer.setSize(box.clientWidth, box.clientHeight, false); camera.aspect = box.clientWidth/box.clientHeight; camera.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  const clock = new THREE.Clock();
+  let mini3dAlive = true;
+  function loop() {
+    if (!mini3dAlive) return;
+    requestAnimationFrame(loop);
+    const t = clock.getElapsedTime();
+    grp.rotation.y += 0.01 + mouse.x * 0.04;
+    grp.rotation.x += (mouse.y * 0.5 - grp.rotation.x) * 0.05;
+    grp.position.y = Math.sin(t) * 0.12;
+    renderer.render(scene, camera);
+  }
+  loop();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { if (!mini3dAlive) { mini3dAlive = true; loop(); } }
+      else { mini3dAlive = false; }
+    }), { threshold: 0 }).observe(box);
+  }
+})();
+
+/* ═══════ 9c. Fond 3D de la section Forfaits (écrans de code qui flottent) ═══════ */
+(function initPricingGL() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('pricingGL');
+  if (!canvas) return;
+  const sec = canvas.parentElement;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x111114, 0.03);
+  const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
+  camera.position.z = 13;
+
+  const grp = new THREE.Group(); scene.add(grp);
+
+  // Plusieurs "écrans d'ordinateur" flottants avec des lignes de code
+  const screens = [];
+  function makeScreen(x, y, z, s) {
+    const g = new THREE.Group();
+    // dalle
+    const panel = new THREE.Mesh(
+      new THREE.BoxGeometry(3.2, 2.1, 0.12),
+      new THREE.MeshStandardMaterial({ color: 0x14141a, metalness: .5, roughness: .4, emissive: 0x0a0a0f, emissiveIntensity: .6 })
+    );
+    g.add(panel);
+    // barre de titre rouge
+    const bar = new THREE.Mesh(new THREE.PlaneGeometry(3.2, 0.34), new THREE.MeshBasicMaterial({ color: 0xE0324A }));
+    bar.position.set(0, 0.88, 0.07); g.add(bar);
+    // lignes de code
+    for (let i = 0; i < 5; i++) {
+      const w = 0.6 + Math.random() * 1.9;
+      const red = Math.random() > 0.6;
+      const line = new THREE.Mesh(
+        new THREE.PlaneGeometry(w, 0.12),
+        new THREE.MeshBasicMaterial({ color: red ? 0xE0324A : 0x444450 })
+      );
+      line.position.set(-1.4 + w/2, 0.4 - i * 0.32, 0.07);
+      g.add(line);
+    }
+    g.position.set(x, y, z);
+    g.scale.setScalar(s);
+    g.userData = { baseY: y, ph: Math.random() * 6, sp: 0.4 + Math.random() * 0.5, rot: (Math.random()-.5)*0.3 };
+    grp.add(g);
+    screens.push(g);
+  }
+  makeScreen(-5, 1.5, -2, 1);
+  makeScreen(5.2, -1, -1, 1.15);
+  makeScreen(-4.5, -2.5, -4, 0.9);
+  makeScreen(4.5, 2.5, -5, 0.8);
+  makeScreen(0, 0, -7, 1.3);
+
+  // Petits cubes rouges qui flottent (éléments de site)
+  const cubes = [];
+  for (let i = 0; i < 14; i++) {
+    const c = new THREE.Mesh(
+      new THREE.BoxGeometry(0.35, 0.35, 0.35),
+      new THREE.MeshStandardMaterial({ color: 0xE0324A, metalness: .6, roughness: .35, emissive: 0x2a0a10, emissiveIntensity: .6 })
+    );
+    c.position.set((Math.random()-.5)*16, (Math.random()-.5)*10, (Math.random()-.5)*6 - 2);
+    c.userData = { sp: 0.5 + Math.random(), ph: Math.random()*6 };
+    grp.add(c); cubes.push(c);
+  }
+
+  const pricingLight1 = new THREE.DirectionalLight(0xffffff, 1.6); pricingLight1.position.set(4, 6, 10); scene.add(pricingLight1);
+  const pricingLight2 = new THREE.PointLight(0xE0324A, 2.4, 50); pricingLight2.position.set(0, 0, 6); scene.add(pricingLight2);
+  scene.add(new THREE.AmbientLight(0x333333, 1));
+
+  const mouse = { x: 0, y: 0 };
+  addEventListener('pointermove', e => { mouse.x = (e.clientX/innerWidth)*2-1; mouse.y = (e.clientY/innerHeight)*2-1; });
+  function resize() { const w = sec.clientWidth, h = sec.clientHeight; renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  const clock = new THREE.Clock();
+  let pricingAlive = true;
+  function loop() {
+    if (!pricingAlive) return;
+    requestAnimationFrame(loop);
+    const t = clock.getElapsedTime();
+    screens.forEach(s => {
+      s.position.y = s.userData.baseY + Math.sin(t * s.userData.sp + s.userData.ph) * 1.1;
+      s.rotation.y = Math.sin(t * 0.4 + s.userData.ph) * 0.35 + s.userData.rot;
+      s.rotation.x = Math.cos(t * 0.3 + s.userData.ph) * 0.18;
+    });
+    cubes.forEach(c => { c.rotation.x += 0.01; c.rotation.y += 0.014; c.position.y += Math.sin(t*c.userData.sp + c.userData.ph)*0.003; });
+    grp.rotation.y = mouse.x * 0.25;
+    grp.rotation.x = mouse.y * 0.14;
+    camera.position.x += (mouse.x * 1.5 - camera.position.x) * 0.03;
+    camera.lookAt(0, 0, -3);
+    renderer.render(scene, camera);
+  }
+  loop();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { if (!pricingAlive) { pricingAlive = true; loop(); } }
+      else { pricingAlive = false; }
+    }), { threshold: 0 }).observe(sec);
+  }
+})();
+
+/* ═══════ 9d. Grand "W" 3D qui tourne (fond du CTA final) ═══════ */
+(function initEchoGL() {
+  if (!window.THREE) return;
+  const canvas = document.getElementById('echoGL');
+  if (!canvas) return;
+  const sec = canvas.parentElement;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+  camera.position.z = 9;
+
+  // Lettre "W" construite en extrudant une forme
+  const shape = new THREE.Shape();
+  const th = 0.9; // épaisseur des branches
+  shape.moveTo(-3, 2.4);
+  shape.lineTo(-3 + th, 2.4);
+  shape.lineTo(-1.5, -1.2);
+  shape.lineTo(0, 1.4);
+  shape.lineTo(1.5, -1.2);
+  shape.lineTo(3 - th, 2.4);
+  shape.lineTo(3, 2.4);
+  shape.lineTo(1.7, -2.4);
+  shape.lineTo(0.9, -2.4);
+  shape.lineTo(0, 0.2);
+  shape.lineTo(-0.9, -2.4);
+  shape.lineTo(-1.7, -2.4);
+  shape.lineTo(-3, 2.4);
+  const wGeo = new THREE.ExtrudeGeometry(shape, { depth: 0.7, bevelEnabled: true, bevelThickness: 0.12, bevelSize: 0.1, bevelSegments: 2 });
+  wGeo.center();
+  const wMat = new THREE.MeshStandardMaterial({ color: 0xE0324A, metalness: .7, roughness: .3, emissive: 0x2a0a10, emissiveIntensity: .5 });
+  const W = new THREE.Mesh(wGeo, wMat);
+  W.scale.set(1.4, 1.4, 1.4);
+  scene.add(W);
+
+  const echoLight1 = new THREE.DirectionalLight(0xffffff, 2); echoLight1.position.set(4, 5, 8); scene.add(echoLight1);
+  const echoLight2 = new THREE.PointLight(0xff5a72, 1.6, 40); echoLight2.position.set(-5, 0, 5); scene.add(echoLight2);
+  scene.add(new THREE.AmbientLight(0x1a1a1a, 1));
+
+  const mouse = { x: 0, y: 0 };
+  addEventListener('pointermove', e => { mouse.x = (e.clientX/innerWidth)*2-1; mouse.y = (e.clientY/innerHeight)*2-1; });
+  function resize() { const w = sec.clientWidth, h = sec.clientHeight; renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  const clock = new THREE.Clock();
+  let echoAlive = true;
+  function loop() {
+    if (!echoAlive) return;
+    requestAnimationFrame(loop);
+    const t = clock.getElapsedTime();
+    W.rotation.y += 0.012;              // tourne sur lui-même
+    W.rotation.x = Math.sin(t*0.5)*0.15 + mouse.y*0.2;
+    W.rotation.z = Math.sin(t*0.3)*0.05;
+    renderer.render(scene, camera);
+  }
+  loop();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { if (!echoAlive) { echoAlive = true; loop(); } }
+      else { echoAlive = false; }
+    }), { threshold: 0 }).observe(sec);
+  }
+})();
+
+/* ═══════ 9e. Dynamisme 3D au défilement ═══════ */
+(function scrollDynamism() {
+  const heads = document.querySelectorAll('.head h2');
+  let ticking = false;
+  function update() {
+    const vh = innerHeight;
+    // Titres de section : léger mouvement 3D selon la position
+    heads.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh && r.bottom > 0) {
+        const off = (r.top + r.height/2 - vh/2) / vh; // -1..1
+        el.style.transform = `perspective(1000px) rotateX(${off * -6}deg) translateY(${off * 14}px)`;
+      }
+    });
+    ticking = false;
+  }
+  addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
+  update();
+})();
+
+/* ═══════ 9f. Fond animé "Threads" — section De l'idée au site ═══════
+   Lignes verticales ondulantes (WebGL brut, très léger) : le fil de
+   l'idée qui devient site. Rouge WebCraft, pause hors écran,
+   désactivé si prefers-reduced-motion. */
+(function initProcessThreads() {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const canvas = document.getElementById('processGL');
+  if (!canvas) return;
+  const sec = canvas.parentElement;
+
+  const FRAG = `
+precision highp float;
+varying vec2 vUv;
+uniform vec2 iRes; uniform float iTime;
+uniform vec3 uColor; uniform float uAmp; uniform float uDist;
+void main(){
+  vec2 uv = vUv; vec2 p = uv * 2. - 1.; p.x *= iRes.x / iRes.y;
+  float lines = 0.;
+  for(float i=0.; i<40.; i++){
+    float x0 = (i / 40.) * 2. - 1.; x0 *= iRes.x / iRes.y;
+    float wave = sin(p.y * 2. + iTime * .8 + i * .5) * .12 * uAmp;
+    float dx = abs(p.x - x0 - wave);
+    float thickness = .003 + .002 * sin(iTime + i);
+    float line = smoothstep(thickness*2., 0., dx);
+    float fade = smoothstep(uDist, 0., abs(p.y));
+    lines += line * fade * .8;
+  }
+  vec3 col = uColor * lines * 1.6;
+  col += uColor * exp(-length(p)*1.5) * .05;
+  gl_FragColor = vec4(col, 1.);
+}`;
+
+  const gl = canvas.getContext('webgl', { alpha: true, antialias: false, premultipliedAlpha: false });
+  if (!gl) return;
+  const vsrc = 'attribute vec2 p; varying vec2 vUv; void main(){ vUv = p*.5+.5; gl_Position = vec4(p,0.,1.); }';
+  function sh(t, s){ const x = gl.createShader(t); gl.shaderSource(x, s); gl.compileShader(x);
+    if (!gl.getShaderParameter(x, gl.COMPILE_STATUS)) console.warn(gl.getShaderInfoLog(x)); return x; }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, sh(gl.VERTEX_SHADER, vsrc));
+  gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FRAG));
+  gl.linkProgram(prog); gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(prog, 'p');
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+  // RE-THEME : rouge WebCraft #E0324A → 0-1
+  gl.uniform3f(gl.getUniformLocation(prog, 'uColor'), 224/255, 50/255, 74/255);
+  gl.uniform1f(gl.getUniformLocation(prog, 'uAmp'), 3.0);
+  gl.uniform1f(gl.getUniformLocation(prog, 'uDist'), 0.9);
+  const uRes = gl.getUniformLocation(prog, 'iRes');
+  const uTime = gl.getUniformLocation(prog, 'iTime');
+
+  function resize() {
+    const dpr = Math.min(devicePixelRatio || 1, 1.5);
+    const w = sec.clientWidth, h = sec.clientHeight;
+    canvas.width = w * dpr; canvas.height = h * dpr;
+    canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+    gl.viewport(0, 0, canvas.width, canvas.height);
+  }
+  addEventListener('resize', resize); resize();
+
+  let alive = false, raf = null;
+  const t0 = performance.now();
+  function loop() {
+    if (!alive) return;
+    raf = requestAnimationFrame(loop);
+    gl.useProgram(prog);
+    gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.uniform1f(uTime, (performance.now() - t0) / 1000);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  }
+  new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { if (!alive) { alive = true; loop(); } }
+    else { alive = false; if (raf) cancelAnimationFrame(raf); }
+  }), { threshold: 0 }).observe(sec);
+})();
+
+/* ═══════ 10. TRADUCTION FR / ENG ═══════ */
+(function initI18n() {
+  const dict = {
+    "Accueil":"Home","Services":"Services","Forfaits":"Packages","Contact":"Contact",
+    "Notre engagement":"Our commitment","Vous êtes entre":"You are in","de bonnes mains":"good hands",
+    "Un site":"A","raft n'est pas une dépense —":"raft site is not an expense —","c'est un outil qui travaille pour vous.":"it's a tool that works for you.",
+    "Un site qui":"A site that","génère du profit":"generates profit",
+    "Chaque page est pensée pour convertir : capter l'attention en quelques secondes, inspirer confiance, et transformer les visiteurs en appels, en réservations et en ventes.":"Every page is built to convert: grab attention in seconds, inspire trust, and turn visitors into calls, bookings and sales.",
+    "Votre site travaille pour vous — même quand vous dormez.":"Your site works for you — even while you sleep.",
+    "Une":"An","présence en ligne":"online presence","qui s'impose":"that stands out",
+    "Être introuvable en ligne, c'est laisser vos clients à la concurrence. On construit une image forte, crédible et mémorable,":"Being invisible online means handing your customers to the competition. We build a strong, credible, memorable image,",
+    "qui met votre commerce à la hauteur des plus grands.":"that puts your business on par with the biggest players.",
+    "Toujours":"Always","vers l'avant":"moving forward",
+    "C'est l'idéologie":"That's the ideology of","raft : avancer, innover, viser plus haut. Design moderne, technologies actuelles, détails soignés —":"raft: move forward, innovate, aim higher. Modern design, current technologies, polished details —",
+    "votre site évolue avec votre ambition.":"your site grows with your ambition.",
+    "Voir les forfaits":"View packages","Confidentialité":"Privacy","Politique de confidentialité":"Privacy policy","Identité":"Identity","Notre identité":"Our identity",
+    "Débuter votre projet":"Start your project","Vos informations":"Your information",
+    "Les champs marqués * sont requis pour envoyer votre demande.":"Fields marked * are required to send your request.",
+    "Prénom":"First name","Nom":"Last name","Téléphone":"Phone","Courriel":"Email",
+    "Nom du commerce":"Business name","Adresse":"Address","(facultatif)":"(optional)",
+    "Notes — parlez-nous de votre projet":"Notes — tell us about your project",
+    "Envoyer ma demande →":"Send my request →",
+    "Réponse en moins de 24 h · Vos informations restent confidentielles.":"Reply within 24 h · Your information stays confidential.",
+    "Merci, c'est bien reçu !":"Thank you, we got it!",
+    "Envoyé ✓ — demande validée":"Sent ✓ — request confirmed",
+    "Retour à l'accueil →":"Back to home →",
+    "Une agence qui":"An agency that","avance avec vous":"moves forward with you",
+    "Née d'une ambition simple":"Born from a simple ambition",
+    "raft est une nouvelle agence web née d'une ambition simple :":"raft is a new web agency born from a simple ambition:",
+    "aider les commerces à prospérer":"helping businesses thrive",
+    "dans un monde où la présence en ligne est devenue essentielle. Chaque entreprise, petite ou grande, mérite un site web moderne, professionnel et performant qui reflète réellement son identité.":"in a world where an online presence has become essential. Every business, small or large, deserves a modern, professional, high-performing website that truly reflects its identity.",
+    "S'améliorer chaque jour":"Improving every day",
+    "Notre objectif est de nous améliorer chaque jour afin d'offrir des solutions toujours plus innovantes. Nous investissons continuellement dans les nouvelles technologies, l'intelligence artificielle et le design moderne pour créer des expériences numériques qui":"Our goal is to improve every day to offer ever more innovative solutions. We continually invest in new technologies, artificial intelligence and modern design to create digital experiences that",
+    "inspirent confiance et génèrent des résultats concrets":"inspire trust and deliver concrete results",
+    "Au service des commerçants":"Serving business owners",
+    "Nous mettons nos connaissances, notre créativité et notre passion au service des commerçants. Nous ne créons pas seulement des sites web : nous développons une":"We put our knowledge, creativity and passion at the service of business owners. We don't just build websites: we develop an",
+    "capable d'attirer de nouveaux clients, de renforcer une image de marque et d'accompagner chaque entreprise dans sa croissance.":"capable of attracting new customers, strengthening a brand image and supporting every business as it grows.",
+    "Une vision durable":"A lasting vision",
+    "Notre vision est de construire un avenir où chaque commerce peut évoluer avec son époque sans être limité par la technologie. En travaillant avec":"Our vision is to build a future where every business can evolve with its time without being limited by technology. By working with","raft, vous choisissez un partenaire qui":"raft, you choose a partner that",
+    "avance avec le temps":"moves with the times",
+    ", innove sans cesse et transforme vos idées en une présence digitale forte, élégante et durable.":", innovates constantly and turns your ideas into a strong, elegant and lasting digital presence.",
+    "Créer":"Create","Présenter":"Present","Avancer":"Advance",
+    "Création de sites":"Custom website","sur mesure":"design",
+    "Des sites conçus":"Websites built","pour":"for","votre commerce":"your business",
+    "livrés vite et bien faits.":"delivered fast and well made.",
+    "raft vous crée un site qui reflète vos idées et vos concepts — rapide, propre, et pensé pour attirer de vrais clients.":"raft builds you a website that reflects your ideas and concepts — fast, clean, and designed to attract real customers.",
+    "Débuter mon projet":"Start my project","Voir les services":"View services","DÉFILER":"SCROLL",
+    "Nos services":"Our services",
+    "Des solutions web":"Web solutions","pour votre commerce":"for your business",
+    "Restauration, coiffure, vente, artisanat, produits uniques, marques de vêtements, salons de beauté — peu importe votre domaine,":"Restaurants, salons, retail, craft, unique products, clothing brands, beauty salons — whatever your field,",
+    "raft construit le site qui vous ressemble. Notre idée est simple : un commerce qui n'est pas visible en ligne aujourd'hui, c'est un commerce qui laisse partir des clients vers la concurrence. On crée des sites qui montrent votre commerce sous son meilleur jour, qui donnent confiance dès le premier coup d'œil, et qui transforment les visiteurs en vrais clients. Chaque site est pensé pour votre réalité : vos produits, vos couleurs, votre ambiance, votre clientèle. Pas de modèle générique recopié d'un commerce à l'autre — on part de qui vous êtes pour construire quelque chose d'unique. Notre but n'est pas juste de vous faire « un site » : c'est de vous donner un outil qui travaille pour vous, qui vous rapporte des appels, des réservations et des ventes, même quand vous dormez. Un site rapide, moderne, qui fonctionne aussi bien sur téléphone que sur ordinateur, et qui met votre commerce à la hauteur des plus grands.":"raft builds the site that fits you. Our idea is simple: a business that isn't visible online today is a business letting customers slip away to competitors. We build sites that show your business at its best, that inspire trust at first glance, and that turn visitors into real customers. Every site is designed for your reality: your products, your colors, your vibe, your clientele. No generic template copied from one business to the next — we start from who you are to build something unique. Our goal isn't just to make you 'a website': it's to give you a tool that works for you, that brings in calls, bookings and sales, even while you sleep. A fast, modern site that works just as well on phone as on desktop, putting your business on par with the biggest players.",
+
+    "Site vitrine":"Showcase site","Site sur mesure":"Custom site","Boutique en ligne":"Online store","Refonte & mise à jour":"Redesign & updates",
+    "Une présence en ligne claire et professionnelle pour présenter votre activité, vos produits et vos coordonnées. C'est la carte de visite moderne de votre commerce : dès qu'un client vous cherche, il vous trouve et voit tout de suite qui vous êtes. On met en valeur ce qui vous rend unique, avec un design soigné qui inspire confiance et donne envie de vous contacter. Idéal pour être visible rapidement et sérieusement.":"A clear, professional online presence to showcase your business, products and contact details. It's your business's modern calling card: the moment a customer looks for you, they find you and instantly see who you are. We highlight what makes you unique, with a polished design that builds trust and makes people want to reach out. Ideal to become visible quickly and seriously.",
+    "Un site entièrement pensé selon vos besoins et votre image, sans modèle générique. Vous décrivez votre vision, vos envies, votre ambiance, et nous la transformons en un site unique qui ne ressemble à aucun autre. Chaque détail est travaillé pour coller à votre marque : couleurs, animations, structure, ton. C'est le choix de ceux qui veulent vraiment se démarquer et marquer les esprits dès la première visite.":"A site fully designed around your needs and image, no generic template. You describe your vision, your wishes, your vibe, and we turn it into a unique site unlike any other. Every detail is crafted to match your brand: colors, animations, structure, tone. It's the choice for those who truly want to stand out and leave a mark from the very first visit.",
+    "Vendez vos produits directement depuis votre site, 24 heures sur 24, sans dépendre uniquement des réseaux sociaux. On construit une boutique avec une présentation soignée de chaque produit et une navigation simple qui donne envie d'acheter. Vos clients commandent en quelques clics, et vous, vous gérez tout facilement. C'est votre commerce ouvert en permanence, même quand votre local est fermé.":"Sell your products directly from your site, 24/7, without relying solely on social media. We build a store with a polished presentation of each product and simple navigation that makes people want to buy. Your customers order in a few clicks, and you manage everything easily. It's your business open around the clock, even when your doors are closed.",
+    "Votre site est dépassé, lent ou mal adapté au téléphone ? On lui redonne une seconde vie. On le modernise, on le rend plus rapide, plus clair et parfaitement adapté à tous les écrans. Un site vieillissant fait fuir les clients sans que vous le sachiez ; un site moderne, lui, les rassure et les retient. On repart de l'existant pour en faire quelque chose dont vous serez fier de partager le lien.":"Is your site outdated, slow or poorly adapted to phones? We give it a second life. We modernize it, make it faster, clearer and perfectly adapted to every screen. An aging site drives customers away without you knowing; a modern one reassures and keeps them. We build on what exists to make something you'll be proud to share.",
+    "Comment ça marche":"How it works","De l'idée au site":"From idea to","en ligne":"live website",
+    "Pas de jargon, pas d'attente interminable. Quatre étapes claires, et votre commerce est en ligne.":"No jargon, no endless waiting. Four clear steps, and your business is online.",
+    "On vous montre le résultat en direct. Vous regardez, vous ressentez, et vous nous dites ce qui doit changer. On ajuste ensemble, tranquillement, jusqu'à ce que le site vous ressemble vraiment et que vous soyez fier de le partager.":"We show you the result live. You look, you feel it, and you tell us what should change. We adjust together, calmly, until the site truly reflects you and you're proud to share it.",
+    "Votre site est publié, prêt à attirer de nouveaux clients. Vous êtes là, vous êtes présent, vous êtes sur la plateforme.":"Your site is published, ready to attract new customers. You're there, you're present, you're on the platform.",
+    "Pourquoi choisir":"Why choose",
+    "Votre avenir se construit en ligne, et il commence aujourd'hui. Avec":"Your future is built online, and it starts today. With",
+    "raft, votre commerce avance, se démarque et attire les clients qu'il mérite. Fini l'époque où l'on passait à côté de vous : votre site travaille pour vous, jour et nuit. On vous donne les moyens des plus grands, à un prix juste et sans complications.":"raft, your business moves forward, stands out and attracts the customers it deserves. No more being overlooked: your site works for you, day and night. We give you the tools of the biggest players, at a fair price and with no hassle.",
+    "raft va de l'avant — et vous emmène avec lui.":"raft moves forward — and takes you along.",
+
+    "Parlons de":"Let's talk about","votre projet":"your project",
+    "Une question, une idée, un commerce à faire décoller ? Écrivez-nous ou appelez-nous directement — on répond vite.":"A question, an idea, a business to launch? Write to us or call us directly — we reply fast.",
+    "Ouvrir dans Gmail →":"Open in Gmail →","Appeler maintenant →":"Call now →","Voir le profil →":"View profile →",
+    "raft Innovations · Laval, Québec":"raft Innovations · Laval, Quebec",
+    "Vous choisissez":"You choose","On conçoit":"We design","Vous validez":"You approve","C'est en ligne":"It's live",
+    "Vous sélectionnez votre forfait et vous nous dites ce que vous voulez : couleurs, style, contenu.":"You pick your package and tell us what you want: colors, style, content.",
+    "On construit votre site sur mesure, sans modèle générique, en respectant votre image de marque.":"We build your custom site, no generic template, respecting your brand image.",
+    "On vous montre le résultat. Vous demandez vos ajustements jusqu'à ce que ce soit parfait.":"We show you the result. You request changes until it's perfect.",
+    "Votre site est publié, rapide et prêt à attirer de nouveaux clients. On reste là si vous avez besoin.":"Your site is published, fast and ready to attract new customers. We stay available if you need us.",
+    "Pourquoi":"Why","raft":"raft","Ce qui nous":"What makes us","rend différents":"different",
+    "jours de livraison":"days delivery","prix transparent":"transparent price","de soutien inclus":"of support included","modèle copié-collé":"copy-paste template",
+    "On ne vous fait pas attendre des semaines. Votre site est prêt en quelques jours.":"We don't make you wait weeks. Your site is ready in a few days.",
+    "Un prix fixe, affiché, sans surprise. Vous savez exactement ce que vous payez.":"A fixed, displayed price, no surprises. You know exactly what you pay.",
+    "Après la mise en ligne, on reste disponibles pour vos questions et ajustements.":"After launch, we stay available for your questions and tweaks.",
+    "Chaque site est unique, pensé pour votre commerce et personne d'autre.":"Every site is unique, designed for your business and no one else.",
+    "Nos forfaits":"Our packages","Un prix clair,":"One clear price,","deux formules":"two options",
+    "Choisissez la formule qui correspond à votre projet. Prix fixe, sans surprise.":"Choose the option that fits your project. Fixed price, no surprises.",
+    "Site Vitrine":"Showcase Site","Sur Mesure +":"Custom +","Forfait unique":"Single package","L'expérience complète":"The complete experience",
+    "Thème, couleurs et contenu personnalisés":"Custom theme, colors and content",
+    "Présentation de votre commerce et vos produits":"Showcase your business and products",
+    "Dépôt de votre menu, on s'occupe du reste":"Upload your menu, we handle the rest",
+    "Livraison rapide en 3-5 jours":"Fast delivery in 3-5 days",
+    "Site adapté au téléphone et à l'ordinateur":"Works on phone and desktop",
+    "Vos coordonnées et réseaux bien visibles":"Your contact info and socials clearly shown","1 mois de soutien inclus":"1 month of support included",
+    "Tout le forfait Vitrine, en plus complet":"Everything in Showcase, more complete",
+    "Comptes clients (connexion, inscription)":"Customer accounts (login, sign-up)",
+    "Paiement en ligne intégré":"Integrated online payment",
+    "Système de réservation possible":"Booking system available",
+    "Plus de pages, site bilingue possible":"More pages, bilingual site available",
+    "Animations 3D intégrées à votre site":"3D animations built into your site",
+    "3D en direct ◆ inclus":"Live 3D ◆ included",
+    "Fixe":"Fair","Un prix clair, affiché d'avance, sans surprise. Vous savez exactement ce que vous payez.":"A clear price, shown upfront, no surprises. You know exactly what you pay.",
+    "Choisir ce forfait":"Choose this package",
+    "Votre commerce mérite":"Your business deserves","un site à sa hauteur.":"a website worthy of it.",
+    "Rejoignez les commerçants qui ont choisi la simplicité, la vitesse et un prix juste. Votre projet peut commencer aujourd'hui.":"Join the businesses that chose simplicity, speed and a fair price. Your project can start today.",
+    "✓ Livraison rapide":"✓ Fast delivery","✓ Prix transparent":"✓ Transparent price","✓ Soutien inclus":"✓ Support included",
+    "Courriel":"Email","Instagram":"Instagram","Téléphone":"Phone",
+    "raft Innovations — Tous droits réservés · Laval, Québec":"raft Innovations — All rights reserved · Laval, Quebec",
+    "Nous écrire par courriel":"Email us","Appeler le 514-290-6183":"Call 514-290-6183",
+    "Pour lancer votre projet, contactez-nous directement. On vous répond sous 24-48h.":"To start your project, contact us directly. We reply within 24-48h.",
+    "SITES VITRINES":"SHOWCASE SITES","BOUTIQUES EN LIGNE":"ONLINE STORES","SUR MESURE":"CUSTOM","REFONTE":"REDESIGN","LIVRÉ EN 3-5 JOURS":"DELIVERED IN 3-5 DAYS"
+  };
+  const inv = {}; Object.keys(dict).forEach(k => inv[dict[k]] = k);
+  let lang = 'fr';
+  const btn = document.getElementById('langBtn');
+  function swap(map) {
+    const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(n){ if(!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        const p=n.parentNode; if(p&&(p.tagName==='SCRIPT'||p.tagName==='STYLE')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT; } });
+    const nodes=[]; while(w.nextNode()) nodes.push(w.currentNode);
+    nodes.forEach(n => { const k=n.nodeValue.trim(); if(map[k]) n.nodeValue = n.nodeValue.replace(k, map[k]); });
+  }
+  btn.addEventListener('click', () => {
+    if (lang==='fr'){ swap(dict); lang='en'; btn.textContent='FR'; document.documentElement.lang='en'; }
+    else { swap(inv); lang='fr'; btn.textContent='ENG'; document.documentElement.lang='fr'; }
+  });
+})();
+
+console.log('%cWebCraft — fichier unique v4.0', 'color:#E0324A; font-weight:bold');
+
+/* ═══════ Curseur halo + étincelles (ordinateur seulement) ═══════ */
+(function initCursorFX() {
+  if (!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  /* — Halo rouge à inertie — */
+  var halo = document.createElement('div');
+  halo.setAttribute('aria-hidden', 'true');
+  halo.style.cssText = 'position:fixed;left:0;top:0;width:46px;height:46px;border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:screen;background:radial-gradient(circle, rgba(224,50,74,.55), rgba(224,50,74,.18) 45%, transparent 70%);filter:blur(2px);transition:width .25s ease,height .25s ease,opacity .3s ease;opacity:0;will-change:transform;';
+  document.body.appendChild(halo);
+
+  var mx = innerWidth / 2, my = innerHeight / 2, hx = mx, hy = my, seen = false;
+  addEventListener('pointermove', function (e) {
+    mx = e.clientX; my = e.clientY;
+    if (!seen) { seen = true; hx = mx; hy = my; halo.style.opacity = '1'; }
+  });
+  document.addEventListener('mouseleave', function () { halo.style.opacity = '0'; });
+  document.addEventListener('mouseenter', function () { if (seen) halo.style.opacity = '1'; });
+
+  function interactive(el) { return el && el.closest && el.closest('a, button, [onclick], input, textarea, select, label'); }
+  addEventListener('pointerover', function (e) {
+    var on = interactive(e.target);
+    halo.style.width = on ? '78px' : '46px';
+    halo.style.height = on ? '78px' : '46px';
+  });
+
+  /* — Étincelles rouges au clic sur les boutons/liens — */
+  var cv = document.createElement('canvas');
+  cv.setAttribute('aria-hidden', 'true');
+  cv.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:9998;';
+  document.body.appendChild(cv);
+  var ctx = cv.getContext('2d');
+  function sizeCv() {
+    var d = Math.min(devicePixelRatio || 1, 2);
+    cv.width = innerWidth * d; cv.height = innerHeight * d;
+    ctx.setTransform(d, 0, 0, d, 0, 0);
+  }
+  addEventListener('resize', sizeCv); sizeCv();
+
+  var parts = [];
+  addEventListener('pointerdown', function (e) {
+    if (!interactive(e.target)) return;
+    for (var i = 0; i < 16; i++) {
+      var a = Math.random() * Math.PI * 2, sp = 2 + Math.random() * 4.5;
+      parts.push({
+        x: e.clientX, y: e.clientY,
+        vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 1.4,
+        life: 1, decay: .02 + Math.random() * .026,
+        r: 1.2 + Math.random() * 2.1,
+        gold: Math.random() < .2
+      });
+    }
+  });
+
+  (function loop() {
+    requestAnimationFrame(loop);
+    hx += (mx - hx) * .16; hy += (my - hy) * .16;
+    halo.style.transform = 'translate(' + hx + 'px,' + hy + 'px) translate(-50%,-50%)';
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    for (var i = parts.length - 1; i >= 0; i--) {
+      var p = parts[i];
+      p.x += p.vx; p.y += p.vy; p.vy += .12; p.vx *= .985; p.life -= p.decay;
+      if (p.life <= 0) { parts.splice(i, 1); continue; }
+      ctx.globalAlpha = Math.max(p.life, 0);
+      ctx.fillStyle = p.gold ? '#c9a227' : '#E0324A';
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r * p.life + .4, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  })();
+})();
+
+</script>
+</body>
+</html>
